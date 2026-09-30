@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Word & Character Counter - ToolBoxPro</title>
+
+    <meta
+        name="description"
+        content="Count words, characters and characters without spaces with the free ToolBoxPro word counter."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            ToolBoxPro
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../pages/about.html">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Word Counter -->
+    <main>
+
+        <section class="tool-page">
+
+            <div class="tool-header">
+
+                <span class="tool-icon">
+                    📝
+                </span>
+
+                <h1>
+                    Word & Character Counter
+                </h1>
+
+                <p>
+                    Count words and characters in your text instantly.
+                </p>
+
+            </div>
+
+
+            <div class="counter-box">
+
+                <textarea
+                    id="textInput"
+                    placeholder="Type or paste your text here..."
+                ></textarea>
+
+
+                <div class="counter-results">
+
+                    <div class="counter-item">
+                        <span id="wordCount">0</span>
+                        <small>Words</small>
+                    </div>
+
+                    <div class="counter-item">
+                        <span id="charCount">0</span>
+                        <small>Characters</small>
+                    </div>
+
+                    <div class="counter-item">
+                        <span id="charNoSpace">0</span>
+                        <small>Without Spaces</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="../index.html" class="back-link">
+                ← Back to All Tools
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 ToolBoxPro. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const textInput =
+            document.getElementById("textInput");
+
+        const wordCount =
+            document.getElementById("wordCount");
+
+        const charCount =
+            document.getElementById("charCount");
+
+        const charNoSpace =
+            document.getElementById("charNoSpace");
+
+
+        textInput.addEventListener("input", function () {
+
+            const text = textInput.value;
+
+
+            // Character count
+            charCount.innerText =
+                text.length;
+
+
+            // Character count without spaces
+            charNoSpace.innerText =
+                text.replace(/\s/g, "").length;
+
+
+            // Word count
+            const words =
+                text.trim().split(/\s+/);
+
+            if (text.trim() === "") {
+
+                wordCount.innerText = 0;
+
+            } else {
+
+                wordCount.innerText =
+                    words.length;
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

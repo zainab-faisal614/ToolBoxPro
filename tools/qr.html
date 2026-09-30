@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator - ToolBoxPro</title>
+
+    <meta
+        name="description"
+        content="Create QR codes from text or links with the free ToolBoxPro QR Code Generator."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            ToolBoxPro
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../pages/about.html">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- QR Generator -->
+    <main>
+
+        <section class="tool-page">
+
+            <div class="tool-header">
+
+                <span class="tool-icon">
+                    📱
+                </span>
+
+                <h1>
+                    QR Code Generator
+                </h1>
+
+                <p>
+                    Create a QR code from any text, website or link.
+                </p>
+
+            </div>
+
+
+            <div class="qr-box">
+
+                <label for="qrText">
+                    Enter Text or URL
+                </label>
+
+                <input
+                    type="text"
+                    id="qrText"
+                    placeholder="https://example.com"
+                >
+
+                <button onclick="generateQR()">
+                    Generate QR Code
+                </button>
+
+
+                <div
+                    id="qrcode"
+                    class="qr-result"
+                ></div>
+
+            </div>
+
+
+            <a href="../index.html" class="back-link">
+                ← Back to All Tools
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 ToolBoxPro. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+
+    <script>
+
+        function generateQR() {
+
+            const text =
+                document.getElementById("qrText").value.trim();
+
+            const qrCode =
+                document.getElementById("qrcode");
+
+
+            qrCode.innerHTML = "";
+
+
+            if (text === "") {
+
+                alert("Please enter text or a URL.");
+
+                return;
+            }
+
+
+            new QRCode(qrCode, {
+                text: text,
+                width: 220,
+                height: 220
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

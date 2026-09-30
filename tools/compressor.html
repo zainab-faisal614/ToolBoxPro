@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Compressor - ToolBoxPro</title>
+
+    <meta
+        name="description"
+        content="Compress images online and reduce image file size with the free ToolBoxPro image compressor."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            ToolBoxPro
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../pages/about.html">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Image Compressor -->
+    <main>
+
+        <section class="tool-page">
+
+            <div class="tool-header">
+
+                <span class="tool-icon">
+                    🖼️
+                </span>
+
+                <h1>
+                    Image Compressor
+                </h1>
+
+                <p>
+                    Reduce image file size while keeping good quality.
+                </p>
+
+            </div>
+
+
+            <div class="compressor-box">
+
+                <label for="imageInput">
+                    Choose an Image
+                </label>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                >
+
+
+                <label for="quality">
+                    Compression Quality
+                </label>
+
+                <div class="quality-row">
+
+                    <input
+                        type="range"
+                        id="quality"
+                        min="10"
+                        max="100"
+                        value="70"
+                    >
+
+                    <span id="qualityValue">
+                        70%
+                    </span>
+
+                </div>
+
+
+                <button onclick="compressImage()">
+                    Compress Image
+                </button>
+
+
+                <div
+                    id="result"
+                    class="compress-result"
+                ></div>
+
+            </div>
+
+
+            <a href="../index.html" class="back-link">
+                ← Back to All Tools
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 ToolBoxPro. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const quality =
+            document.getElementById("quality");
+
+        const qualityValue =
+            document.getElementById("qualityValue");
+
+
+        quality.addEventListener("input", function () {
+
+            qualityValue.innerText =
+                quality.value + "%";
+
+        });
+
+
+        function compressImage() {
+
+            const fileInput =
+                document.getElementById("imageInput");
+
+            const result =
+                document.getElementById("result");
+
+
+            if (fileInput.files.length === 0) {
+
+                result.innerHTML =
+                    "<p>Please choose an image first.</p>";
+
+                return;
+            }
+
+
+            const file =
+                fileInput.files[0];
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload = function (event) {
+
+                const image =
+                    new Image();
+
+
+                image.onload = function () {
+
+                    const canvas =
+                        document.createElement("canvas");
+
+                    const context =
+                        canvas.getContext("2d");
+
+
+                    canvas.width =
+                        image.width;
+
+                    canvas.height =
+                        image.height;
+
+
+                    context.drawImage(
+                        image,
+                        0,
+                        0
+                    );
+
+
+                    const compressionQuality =
+                        parseInt(quality.value) / 100;
+
+
+                    canvas.toBlob(
+                        function (blob) {
+
+                            const compressedSize =
+                                (blob.size / 1024).toFixed(2);
+
+                            const originalSize =
+                                (file.size / 1024).toFixed(2);
+
+
+                            const downloadUrl =
+                                URL.createObjectURL(blob);
+
+
+                            result.innerHTML = `
+
+                                <div class="compression-result">
+
+                                    <p>
+                                        <strong>Original Size:</strong>
+                                        ${originalSize} KB
+                                    </p>
+
+                                    <p>
+                                        <strong>Compressed Size:</strong>
+                                        ${compressedSize} KB
+                                    </p>
+
+                                    <a
+                                        href="${downloadUrl}"
+                                        download="compressed-image.jpg"
+                                        class="download-btn"
+                                    >
+                                        Download Compressed Image
+                                    </a>
+
+                                </div>
+
+                            `;
+
+                        },
+                        "image/jpeg",
+                        compressionQuality
+                    );
+
+                };
+
+
+                image.src =
+                    event.target.result;
+
+            };
+
+
+            reader.readAsDataURL(file);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
