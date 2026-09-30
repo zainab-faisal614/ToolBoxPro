@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +17,15 @@
         content="QR code generator, QR generator, free QR code generator, online QR code maker, URL QR code"
     >
 
+    <meta name="author" content="ToolBoxPro">
+
     <link
         rel="canonical"
         href="https://zainab-faisal614.github.io/ToolBoxPro/tools/qr.html"
     >
 
     <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
@@ -67,6 +69,7 @@
             </div>
 
 
+            <!-- QR Generator Box -->
             <div class="qr-box">
 
                 <label for="qrText">
@@ -82,7 +85,6 @@
                 <button onclick="generateQR()">
                     Generate QR Code
                 </button>
-
 
                 <div
                     id="qrcode"
@@ -220,5 +222,86 @@
             </section>
 
 
-            <a href="../index.html" class="b
-```
+            <!-- Back Link -->
+            <a
+                href="../index.html"
+                class="back-link"
+            >
+                ← Back to All Tools
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 ToolBoxPro. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+
+    <!-- QR Code JavaScript -->
+    <script>
+
+        function generateQR() {
+
+            const text =
+                document.getElementById("qrText").value.trim();
+
+            const qrCode =
+                document.getElementById("qrcode");
+
+
+            qrCode.innerHTML = "";
+
+
+            if (text === "") {
+
+                alert("Please enter text or a URL.");
+
+                return;
+            }
+
+
+            new QRCode(qrCode, {
+
+                text: text,
+
+                width: 220,
+
+                height: 220
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
