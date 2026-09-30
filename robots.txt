@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zainab-faisal614.github.io/ToolBoxPro/sitemap.xml
