@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free BMI Calculator - Calculate Your BMI | ToolBoxPro</title>
+
+<meta
+    name="description"
+    content="Calculate your BMI online for free with ToolBoxPro. Enter your height and weight to get your BMI score and category instantly."
+>
+
+<meta
+    name="keywords"
+    content="BMI calculator, free BMI calculator, calculate BMI, BMI calculator online, body mass index calculator"
+>
+
+<meta name="author" content="ToolBoxPro">
+
+<link
+    rel="canonical"
+    href="https://toolboxpro.pages.dev/bmi.html"
+>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- Header -->
+<header>
+
+    <div class="logo">
+        ToolBoxPro
+    </div>
+
+   <nav>
+    <a href="../index.html">Home</a>
+    <a href="../index.html#tools">Tools</a>
+    <a href="../pages/about.html">About</a>
+</nav>
+
+</header>
+
+
+<main class="tool-page">
+
+    <!-- BMI Calculator -->
+    <section class="tool-container">
+
+        <h1>BMI Calculator</h1>
+
+        <p class="tool-intro">
+            Calculate your Body Mass Index using your height and weight.
+        </p>
+
+        <p class="tool-description">
+            Use this free BMI calculator to estimate your Body Mass Index
+            based on your height and weight. You can calculate BMI using
+            metric or imperial units.
+        </p>
+
+
+        <!-- Height Unit -->
+        <div class="unit-selector">
+
+            <button
+                type="button"
+                class="unit-btn active"
+                onclick="showMetric()"
+                id="metricBtn"
+            >
+                cm / kg
+            </button>
+
+            <button
+                type="button"
+                class="unit-btn"
+                onclick="showImperial()"
+                id="imperialBtn"
+            >
+                ft / lbs
+            </button>
+
+        </div>
+
+
+        <!-- Metric Inputs -->
+        <div id="metricInputs">
+
+            <div class="input-group">
+
+                <label for="heightCm">
+                    Height (cm)
+                </label>
+
+                <input
+                    type="number"
+                    id="heightCm"
+                    placeholder="e.g. 170"
+                    min="1"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="weightKg">
+                    Weight (kg)
+                </label>
+
+                <input
+                    type="number"
+                    id="weightKg"
+                    placeholder="e.g. 65"
+                    min="1"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Imperial Inputs -->
+        <div id="imperialInputs" style="display: none;">
+
+            <div class="input-group">
+
+                <label for="heightFt">
+                    Height (feet)
+                </label>
+
+                <input
+                    type="number"
+                    id="heightFt"
+                    placeholder="e.g. 5"
+                    min="1"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="heightIn">
+                    Height (inches)
+                </label>
+
+                <input
+                    type="number"
+                    id="heightIn"
+                    placeholder="e.g. 7"
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="weightLbs">
+                    Weight (lbs)
+                </label>
+
+                <input
+                    type="number"
+                    id="weightLbs"
+                    placeholder="e.g. 143"
+                    min="1"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="bmi-buttons">
+
+            <button
+                type="button"
+                onclick="calculateBMI()"
+            >
+                Calculate BMI
+            </button>
+
+            <button
+                type="button"
+                class="reset-btn"
+                onclick="resetBMI()"
+            >
+                Reset
+            </button>
+
+        </div>
+
+
+        <!-- Result -->
+        <div
+            id="result"
+            class="result-box"
+        ></div>
+
+    </section>
+
+
+    <!-- BMI Information -->
+    <section class="bmi-info">
+<!-- BMI FAQ -->
+<section class="bmi-faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+
+        <h3>What is BMI?</h3>
+
+        <p>
+            BMI stands for Body Mass Index. It is a measurement
+            calculated using a person's height and weight.
+        </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <h3>How is BMI calculated?</h3>
+
+        <p>
+            BMI is calculated by dividing weight in kilograms
+            by height in meters squared.
+        </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <h3>What is a normal BMI range?</h3>
+
+        <p>
+            For adults, a BMI from 18.5 to 24.9 is generally
+            classified as the normal weight range.
+        </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <h3>Is BMI a medical diagnosis?</h3>
+
+        <p>
+            No. BMI is a general screening measure and should
+            not be used as a medical diagnosis by itself.
+        </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+        <h3>Can I calculate BMI in pounds and feet?</h3>
+
+        <p>
+            Yes. This calculator supports both metric
+            (cm/kg) and imperial (ft/lbs) units.
+        </p>
+
+    </div>
+
+</section>
+        <h2>
+            BMI Categories
+        </h2>
+
+
+        <div class="bmi-table">
+
+            <div>
+                <strong>BMI Range</strong>
+                <strong>Category</strong>
+            </div>
+
+            <div>
+                <span>Below 18.5</span>
+                <span>Underweight</span>
+            </div>
+
+            <div>
+                <span>18.5 – 24.9</span>
+                <span>Normal weight</span>
+            </div>
+
+            <div>
+                <span>25 – 29.9</span>
+                <span>Overweight</span>
+            </div>
+
+            <div>
+                <span>30 or above</span>
+                <span>Obesity</span>
+            </div>
+
+        </div>
+
+
+        <p class="disclaimer">
+            BMI is a general screening measure and does not provide a medical diagnosis.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 ToolBoxPro. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    function showMetric() {
+
+        document.getElementById("metricInputs").style.display = "block";
+
+        document.getElementById("imperialInputs").style.display = "none";
+
+        document.getElementById("metricBtn").classList.add("active");
+
+        document.getElementById("imperialBtn").classList.remove("active");
+
+    }
+
+
+    function showImperial() {
+
+        document.getElementById("metricInputs").style.display = "none";
+
+        document.getElementById("imperialInputs").style.display = "block";
+
+        document.getElementById("imperialBtn").classList.add("active");
+
+        document.getElementById("metricBtn").classList.remove("active");
+
+    }
+
+
+    function calculateBMI() {
+
+        let bmi;
+
+
+        // Metric
+        if (
+            document.getElementById("metricInputs").style.display !== "none"
+        ) {
+
+            const heightCm =
+                parseFloat(document.getElementById("heightCm").value);
+
+            const weightKg =
+                parseFloat(document.getElementById("weightKg").value);
+
+
+            if (!heightCm || !weightKg || heightCm <= 0 || weightKg <= 0) {
+
+                showError();
+
+                return;
+            }
+
+
+            const heightMeters = heightCm / 100;
+
+            bmi =
+                weightKg /
+                (heightMeters * heightMeters);
+
+        }
+
+
+        // Imperial
+        else {
+
+            const feet =
+                parseFloat(document.getElementById("heightFt").value) || 0;
+
+            const inches =
+                parseFloat(document.getElementById("heightIn").value) || 0;
+
+            const weightLbs =
+                parseFloat(document.getElementById("weightLbs").value);
+
+
+            if (
+                feet <= 0 ||
+                inches < 0 ||
+                weightLbs <= 0
+            ) {
+
+                showError();
+
+                return;
+            }
+
+
+            const totalInches =
+                (feet * 12) + inches;
+
+
+            bmi =
+                (weightLbs * 703) /
+                (totalInches * totalInches);
+
+        }
+
+
+        bmi = bmi.toFixed(1);
+
+
+        let category;
+        let message;
+
+
+        if (bmi < 18.5) {
+
+            category = "Underweight";
+
+            message =
+                "Your BMI is below the standard healthy range.";
+
+        }
+
+        else if (bmi < 25) {
+
+            category = "Normal weight";
+
+            message =
+                "Your BMI is within the standard healthy range.";
+
+        }
+
+        else if (bmi < 30) {
+
+            category = "Overweight";
+
+            message =
+                "Your BMI is above the standard healthy range.";
+
+        }
+
+        else {
+
+            category = "Obesity";
+
+            message =
+                "Your BMI is in the obesity range.";
+
+        }
+
+
+        document.getElementById("result").innerHTML = `
+
+            <h3>Your BMI</h3>
+
+            <div class="bmi-number">
+                ${bmi}
+            </div>
+
+            <p class="bmi-category">
+                ${category}
+            </p>
+
+            <p>
+                ${message}
+            </p>
+
+        `;
+
+    }
+
+
+    function showError() {
+
+        document.getElementById("result").innerHTML = `
+
+            <p class="error-message">
+                Please enter valid height and weight values.
+            </p>
+
+        `;
+
+    }
+
+
+    function resetBMI() {
+
+        document.getElementById("heightCm").value = "";
+
+        document.getElementById("weightKg").value = "";
+
+        document.getElementById("heightFt").value = "";
+
+        document.getElementById("heightIn").value = "";
+
+        document.getElementById("weightLbs").value = "";
+
+        document.getElementById("result").innerHTML = "";
+
+        showMetric();
+
+    }
+
+</script>
+```
+
+</body>
+
+</html>
