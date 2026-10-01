@@ -3,28 +3,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO Title -->
     <title>Percentage Calculator - Free Online Calculator | ToolBoxPro</title>
 
+    <!-- SEO Description -->
     <meta
         name="description"
-        content="Use ToolBoxPro's free percentage calculator to quickly calculate percentages of any number. Simple, fast and easy to use."
+        content="Calculate percentages quickly with ToolBoxPro's free online percentage calculator. Find a percentage of any number with a simple and easy-to-use calculator."
     >
 
+    <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="percentage calculator, percent calculator, calculate percentage, percentage calculator online, free percentage calculator"
+        content="percentage calculator, percent calculator, calculate percentage, percentage calculator online, free percentage calculator, percentage of a number"
     >
 
+    <meta name="author" content="ToolBoxPro">
+
+    <!-- Canonical URL -->
     <link
         rel="canonical"
         href="https://zainab-faisal614.github.io/ToolBoxPro/tools/percentage.html"
     >
 
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Percentage Calculator - Free Online Calculator | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate percentages quickly and easily with ToolBoxPro's free online percentage calculator."
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/percentage.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
@@ -67,6 +106,7 @@
             </div>
 
 
+            <!-- Calculator Box -->
             <div class="calculator-box">
 
                 <label for="number">
@@ -96,7 +136,10 @@
                 </button>
 
 
-                <div id="result" class="result">
+                <div
+                    id="result"
+                    class="result"
+                >
                     Result will appear here
                 </div>
 
@@ -160,6 +203,7 @@
                     Frequently Asked Questions
                 </h2>
 
+
                 <h3>
                     What is a percentage?
                 </h3>
@@ -192,7 +236,11 @@
             </section>
 
 
-            <a href="../index.html" class="back-link">
+            <!-- Back Link -->
+            <a
+                href="../index.html"
+                class="back-link"
+            >
                 ← Back to All Tools
             </a>
 
@@ -227,21 +275,29 @@
     </footer>
 
 
+    <!-- Percentage Calculator Script -->
     <script>
 
         function calculatePercentage() {
 
             const number =
-                parseFloat(document.getElementById("number").value);
+                parseFloat(
+                    document.getElementById("number").value
+                );
 
             const percentage =
-                parseFloat(document.getElementById("percentage").value);
+                parseFloat(
+                    document.getElementById("percentage").value
+                );
 
             const result =
                 document.getElementById("result");
 
 
-            if (isNaN(number) || isNaN(percentage)) {
+            if (
+                isNaN(number) ||
+                isNaN(percentage)
+            ) {
 
                 result.innerText =
                     "Please enter both values.";
@@ -255,7 +311,12 @@
 
 
             result.innerText =
-                percentage + "% of " + number + " = " + answer;
+                percentage +
+                "% of " +
+                number +
+                " = " +
+                answer;
+
         }
 
     </script>
@@ -263,4 +324,3 @@
 </body>
 
 </html>
-```
