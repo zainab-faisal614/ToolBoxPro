@@ -1,35 +1,62 @@
+/* =========================================================
+   TOOLBOXPRO - PROFESSIONAL GLOBAL STYLES
+   ========================================================= */
+
+/* ---------- Reset ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #222;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Header */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 header {
-    background: white;
-    padding: 20px 8%;
+    background: #ffffff;
+    padding: 18px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 800;
     color: #2563eb;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
 nav a {
     text-decoration: none;
-    color: #222;
-    margin-left: 20px;
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
@@ -38,191 +65,266 @@ nav a:hover {
 }
 
 
-/* Hero */
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
 .hero {
-    background: white;
-    padding: 110px 20px;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 35%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    padding: 105px 20px 100px;
     text-align: center;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
 }
 
 .hero-badge {
     display: inline-block;
-    padding: 8px 16px;
-    margin-bottom: 20px;
+    padding: 8px 17px;
+    margin-bottom: 22px;
     background: #eff6ff;
     color: #2563eb;
-    border-radius: 20px;
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 50px;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: #111827;
 }
 
 .hero p {
-    max-width: 650px;
-    margin: 0 auto 30px;
+    max-width: 680px;
+    margin: 0 auto 32px;
     font-size: 18px;
-    line-height: 1.7;
-    color: #666;
+    line-height: 1.8;
+    color: #6b7280;
 }
 
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
 
-/* Buttons */
+/* =========================================================
+   GENERAL BUTTONS
+   ========================================================= */
+
 .btn {
     display: inline-block;
     background: #2563eb;
-    color: white;
-    padding: 13px 22px;
-    border-radius: 7px;
+    color: #ffffff;
+    padding: 13px 23px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    font-weight: 600;
+    border: 1px solid #2563eb;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .btn:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.20);
 }
 
 .secondary-btn {
-    background: transparent;
+    background: #ffffff;
     color: #2563eb;
     border: 1px solid #2563eb;
 }
 
 .secondary-btn:hover {
     background: #2563eb;
-    color: white;
+    color: #ffffff;
 }
 
 
-/* Tools Section */
+/* =========================================================
+   TOOLS SECTION
+   ========================================================= */
+
 .tools-section {
-    padding: 80px 8%;
+    padding: 85px 8%;
     text-align: center;
 }
 
 .tools-section h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #111827;
 }
 
 .tools-intro {
-    color: #666;
-    margin-bottom: 35px;
+    max-width: 680px;
+    margin: 0 auto 35px;
+    color: #6b7280;
+    font-size: 16px;
 }
 
 
-/* Search */
+/* =========================================================
+   TOOL SEARCH
+   ========================================================= */
+
 .tool-search {
-    width: 80%;
-    max-width: 500px;
-    padding: 14px 18px;
-    margin-bottom: 35px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 40px;
+    padding: 15px 18px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
     font-size: 16px;
+    color: #111827;
     outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tool-search::placeholder {
+    color: #9ca3af;
 }
 
 .tool-search:focus {
     border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
 }
 
 
-/* Tool Cards */
+/* =========================================================
+   TOOL CARDS
+   ========================================================= */
+
 .tools-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tool-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 30px 24px;
+    border-radius: 14px;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .tool-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.15);
+    transform: translateY(-7px);
+    border-color: #bfdbfe;
+    box-shadow: 0 15px 32px rgba(37, 99, 235, 0.12);
 }
 
 .tool-card h3 {
     margin-bottom: 12px;
-    font-size: 20px;
+    font-size: 19px;
+    line-height: 1.4;
+    color: #111827;
 }
 
 .tool-card p {
+    flex: 1;
+    margin-bottom: 22px;
+    color: #6b7280;
     line-height: 1.6;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 15px;
 }
 
 .tool-btn {
     display: inline-block;
     background: #2563eb;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 6px;
+    color: #ffffff;
+    padding: 10px 19px;
+    border-radius: 7px;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .tool-btn:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.18);
 }
 
 
-/* About Section */
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
 .about {
-    background: white;
-    padding: 70px 10%;
+    background: #ffffff;
+    padding: 80px 10%;
     text-align: center;
+    border-top: 1px solid #e5e7eb;
 }
 
 .about h2 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    font-size: 34px;
+    color: #111827;
 }
 
 .about p {
-    max-width: 700px;
-    margin: 0 auto 25px;
-    line-height: 1.7;
-    color: #666;
+    max-width: 720px;
+    margin: 0 auto 28px;
+    line-height: 1.8;
+    color: #6b7280;
 }
 
 
-/* Footer */
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 footer {
     background: #111827;
-    color: white;
+    color: #ffffff;
     text-align: center;
-    padding: 30px;
+    padding: 32px 20px;
+}
+
+footer p {
+    color: #d1d5db;
+    font-size: 14px;
 }
 
 .footer-links {
-    margin-top: 15px;
+    margin-top: 14px;
 }
 
 .footer-links a {
@@ -230,43 +332,51 @@ footer {
     text-decoration: none;
     margin: 0 10px;
     font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
     color: #60a5fa;
-    text-decoration: underline;
 }
 
 
-/* Info Pages */
+/* =========================================================
+   INFORMATION PAGES
+   ========================================================= */
+
 .info-page {
     max-width: 900px;
-    margin: 50px auto;
-    padding: 60px 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin: 55px auto;
+    padding: 60px 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
 }
 
 .info-page h1 {
     font-size: 40px;
+    line-height: 1.2;
     margin-bottom: 25px;
     text-align: center;
+    color: #111827;
 }
 
 .info-page h2 {
-    font-size: 28px;
+    font-size: 27px;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    color: #111827;
 }
 
 .info-page h3 {
     margin-bottom: 8px;
+    color: #111827;
 }
 
 .info-page p {
     line-height: 1.8;
-    color: #555;
+    color: #555f6d;
     margin-bottom: 20px;
 }
 
@@ -278,9 +388,9 @@ footer {
 }
 
 .info-list div {
-    padding: 20px;
+    padding: 22px;
     background: #eff6ff;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #dbeafe;
 }
 
@@ -290,11 +400,14 @@ footer {
 }
 
 
-/* Individual Tool Pages */
+/* =========================================================
+   INDIVIDUAL TOOL PAGES
+   ========================================================= */
+
 .tool-page {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
-    padding: 60px 30px;
+    padding: 40px 25px;
     text-align: center;
 }
 
@@ -310,55 +423,65 @@ footer {
 
 .tool-header h1 {
     font-size: 40px;
+    line-height: 1.2;
     margin-bottom: 15px;
+    color: #111827;
 }
 
 .tool-header p {
-    color: #666;
+    color: #6b7280;
     font-size: 17px;
 }
 
 
-/* Calculator */
+/* =========================================================
+   CALCULATOR BOX
+   ========================================================= */
+
 .calculator-box {
-    max-width: 500px;
+    max-width: 520px;
     margin: auto;
     padding: 35px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     text-align: left;
 }
 
 .calculator-box label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 700;
+    color: #374151;
 }
 
 .calculator-box input {
     width: 100%;
     padding: 13px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 16px;
+    outline: none;
 }
 
 .calculator-box input:focus {
-    outline: none;
     border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
 }
 
 .calculator-box button {
     width: 100%;
     padding: 14px;
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
     background: #2563eb;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .calculator-box button:hover {
@@ -369,18 +492,24 @@ footer {
     margin-top: 25px;
     padding: 18px;
     background: #eff6ff;
-    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
     color: #1d4ed8;
 }
+
+
+/* =========================================================
+   BACK LINK
+   ========================================================= */
 
 .back-link {
     display: inline-block;
     margin-top: 30px;
     color: #2563eb;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .back-link:hover {
@@ -388,30 +517,35 @@ footer {
 }
 
 
-/* Word Counter */
+/* =========================================================
+   WORD COUNTER
+   ========================================================= */
+
 .counter-box {
     max-width: 700px;
     margin: auto;
     padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
 }
 
 .counter-box textarea {
     width: 100%;
     min-height: 250px;
     padding: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
     resize: vertical;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
 }
 
 .counter-box textarea:focus {
-    outline: none;
     border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
 }
 
 .counter-results {
@@ -424,45 +558,50 @@ footer {
 .counter-item {
     padding: 20px 10px;
     background: #eff6ff;
-    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
     text-align: center;
 }
 
 .counter-item span {
     display: block;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 5px;
     color: #2563eb;
 }
 
 .counter-item small {
-    color: #666;
+    color: #6b7280;
 }
 
 
-/* Password Generator */
+/* =========================================================
+   PASSWORD GENERATOR
+   ========================================================= */
+
 .password-box {
     max-width: 550px;
     margin: auto;
     padding: 35px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     text-align: left;
 }
 
 .password-box > label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .password-box > input {
     width: 100%;
     padding: 13px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -485,10 +624,11 @@ footer {
     width: 100%;
     padding: 14px;
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
     background: #2563eb;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -503,8 +643,8 @@ footer {
 .password-result input {
     width: 100%;
     padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 16px;
     margin-bottom: 12px;
 }
@@ -513,58 +653,65 @@ footer {
     width: 100%;
     padding: 12px;
     border: 1px solid #2563eb;
-    border-radius: 7px;
-    background: white;
+    border-radius: 8px;
+    background: #ffffff;
     color: #2563eb;
     cursor: pointer;
     font-size: 15px;
+    font-weight: 600;
 }
 
 .copy-btn:hover {
     background: #2563eb;
-    color: white;
+    color: #ffffff;
 }
 
 
-/* QR Code Generator */
+/* =========================================================
+   QR CODE GENERATOR
+   ========================================================= */
+
 .qr-box {
     max-width: 550px;
     margin: auto;
     padding: 35px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     text-align: left;
 }
 
 .qr-box label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .qr-box input {
     width: 100%;
     padding: 14px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 16px;
+    outline: none;
 }
 
 .qr-box input:focus {
-    outline: none;
     border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
 }
 
 .qr-box > button {
     width: 100%;
     padding: 14px;
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
     background: #2563eb;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -582,32 +729,37 @@ footer {
 
 .qr-result img {
     max-width: 220px;
+    border-radius: 6px;
 }
 
 
-/* Image Compressor */
+/* =========================================================
+   IMAGE COMPRESSOR
+   ========================================================= */
+
 .compressor-box {
     max-width: 600px;
     margin: auto;
     padding: 35px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     text-align: left;
 }
 
 .compressor-box > label {
     display: block;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .compressor-box input[type="file"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 25px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
 }
 
 .quality-row {
@@ -624,7 +776,7 @@ footer {
 
 #qualityValue {
     min-width: 45px;
-    font-weight: bold;
+    font-weight: 700;
     color: #2563eb;
 }
 
@@ -632,10 +784,11 @@ footer {
     width: 100%;
     padding: 14px;
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
     background: #2563eb;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -650,7 +803,8 @@ footer {
 .compression-result {
     padding: 20px;
     background: #eff6ff;
-    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
 }
 
 .compression-result p {
@@ -662,9 +816,10 @@ footer {
     margin-top: 15px;
     padding: 12px 18px;
     background: #2563eb;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 7px;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 .download-btn:hover {
@@ -672,125 +827,57 @@ footer {
 }
 
 
-/* Mobile */
-@media (max-width: 600px) {
-
-    header {
-        padding: 15px 5%;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 70px 20px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-buttons .btn {
-        width: 200px;
-    }
-
-    .tools-section {
-        padding: 50px 5%;
-    }
-
-    .tools-section h2,
-    .about h2 {
-        font-size: 27px;
-    }
-
-    .tool-card {
-        padding: 25px 15px;
-    }
-
-    .about {
-        padding: 50px 8%;
-    }
-
-    .info-page {
-        margin: 30px 5%;
-        padding: 40px 20px;
-    }
-
-    .info-page h1 {
-        font-size: 30px;
-    }
-
-    .info-page h2 {
-        font-size: 24px;
-    }
-
-    .tool-page {
-        padding: 40px 20px;
-        margin: 20px auto;
-    }
-
-    .tool-header h1 {
-        font-size: 30px;
-    }
-
-    .calculator-box {
-        padding: 25px 20px;
-    }
-
-    .counter-results {
-        grid-template-columns: 1fr;
-    }
-
-    .counter-box {
-        padding: 20px;
-    }
-
-    .password-box {
-        padding: 25px 20px;
-    }
-
-    .compressor-box {
-        padding: 25px 20px;
-    }
-}
-/* =========================
+/* =========================================================
    BMI CALCULATOR
-========================= */
-
-.tool-page {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-}
+   ========================================================= */
 
 .tool-container {
     background: #ffffff;
     padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     text-align: center;
 }
 
 .tool-container h2 {
     margin-bottom: 10px;
+    color: #111827;
 }
 
 .tool-intro {
-    color: #666;
+    color: #6b7280;
     margin-bottom: 30px;
+}
+
+.unit-selector {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.unit-btn {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.unit-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.unit-btn.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
 }
 
 .input-group {
@@ -802,20 +889,21 @@ footer {
     display: block;
     font-weight: 600;
     margin-bottom: 8px;
+    color: #374151;
 }
 
 .input-group input {
     width: 100%;
     padding: 13px;
-    border: 1px solid #ddd;
+    border: 1px solid #d1d5db;
     border-radius: 8px;
     font-size: 16px;
-    box-sizing: border-box;
+    outline: none;
 }
 
 .input-group input:focus {
-    outline: none;
     border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
 }
 
 .tool-container button {
@@ -824,117 +912,16 @@ footer {
     border: none;
     border-radius: 8px;
     background: #2563eb;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .tool-container button:hover {
     background: #1d4ed8;
 }
-
-.result-box {
-    margin-top: 25px;
-    padding: 20px;
-    border-radius: 12px;
-    background: #f3f7ff;
-    min-height: 30px;
-}
-
-.bmi-number {
-    font-size: 42px;
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-.bmi-info {
-    background: #ffffff;
-    margin-top: 25px;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-}
-
-.bmi-info h3 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.bmi-table > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.bmi-table > div:first-child {
-    font-weight: 700;
-}
-
-.disclaimer {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #777;
-    text-align: center;
-}
-
-
-/* Mobile */
-@media (max-width: 600px) {
-
-    .tool-page {
-        margin: 25px auto;
-        padding: 15px;
-    }
-
-    .tool-container,
-    .bmi-info {
-        padding: 22px;
-    }
-
-    .tool-container h2 {
-        font-size: 25px;
-    }
-
-    .bmi-number {
-        font-size: 36px;
-    }
-}
-/* =========================
-   PROFESSIONAL BMI CALCULATOR
-========================= */
-
-.unit-selector {
-    display: flex;
-    gap: 10px;
-    margin: 25px 0;
-}
-
-.unit-btn {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #f8f8f8;
-    color: #333;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.unit-btn:hover {
-    border-color: #2563eb;
-}
-
-.unit-btn.active {
-    background: #2563eb;
-    color: white;
-    border-color: #2563eb;
-}
-
-
-/* BMI Buttons */
 
 .bmi-buttons {
     display: flex;
@@ -946,28 +933,22 @@ footer {
     flex: 1;
 }
 
-
-/* Reset Button */
-
 .bmi-buttons .reset-btn {
-    background: #f1f1f1;
-    color: #333;
-    border: 1px solid #ddd;
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
 }
 
 .bmi-buttons .reset-btn:hover {
-    background: #e5e5e5;
+    background: #e5e7eb;
 }
-
-
-/* BMI Result */
 
 .result-box {
     margin-top: 28px;
     padding: 25px;
     border-radius: 14px;
     background: #f5f8ff;
-    border: 1px solid #e2e8ff;
+    border: 1px solid #dbeafe;
     text-align: center;
     min-height: 35px;
 }
@@ -975,12 +956,14 @@ footer {
 .result-box h3 {
     margin: 0;
     font-size: 18px;
+    color: #374151;
 }
 
 .bmi-number {
     font-size: 48px;
     font-weight: 700;
     margin: 8px 0;
+    color: #2563eb;
 }
 
 .bmi-category {
@@ -993,18 +976,17 @@ footer {
     margin: 5px 0;
 }
 
-
-/* Error */
-
 .error-message {
     font-weight: 600;
 }
 
-
-/* BMI Information */
-
 .bmi-info {
     margin-top: 30px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
 .bmi-info h2 {
@@ -1015,7 +997,7 @@ footer {
 .bmi-table {
     overflow: hidden;
     border-radius: 10px;
-    border: 1px solid #eee;
+    border: 1px solid #e5e7eb;
 }
 
 .bmi-table > div {
@@ -1031,12 +1013,207 @@ footer {
 
 .bmi-table > div:first-child {
     background: #f5f7fb;
+    font-weight: 700;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+}
+
+.bmi-faq {
+    margin-top: 30px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.bmi-faq h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.faq-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    margin-bottom: 8px;
+    font-size: 17px;
+    color: #111827;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
 }
 
 
-/* Mobile */
+/* =========================================================
+   GENERAL FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 5%;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .tools-section {
+        padding: 65px 5%;
+    }
+
+    .tools-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-page {
+        margin: 35px 5%;
+    }
+}
+
 
 @media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 65px 20px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+        letter-spacing: -0.8px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 210px;
+        text-align: center;
+    }
+
+    .tools-section {
+        padding: 55px 5%;
+    }
+
+    .tools-section h2,
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .tools-intro {
+        font-size: 15px;
+    }
+
+    .tool-search {
+        width: 100%;
+    }
+
+    .tools-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tool-card {
+        padding: 26px 20px;
+    }
+
+    .about {
+        padding: 55px 8%;
+    }
+
+    .info-page {
+        margin: 25px 4%;
+        padding: 38px 20px;
+    }
+
+    .info-page h1 {
+        font-size: 30px;
+    }
+
+    .info-page h2 {
+        font-size: 24px;
+    }
+
+    .tool-page {
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+
+    .tool-header h1 {
+        font-size: 30px;
+    }
+
+    .calculator-box,
+    .counter-box,
+    .password-box,
+    .qr-box,
+    .compressor-box {
+        padding: 25px 20px;
+    }
+
+    .counter-results {
+        grid-template-columns: 1fr;
+    }
 
     .unit-selector {
         flex-direction: column;
@@ -1050,40 +1227,60 @@ footer {
         font-size: 40px;
     }
 
-}
-/* =========================
-   BMI FAQ
-========================= */
+    .bmi-info,
+    .bmi-faq,
+    .tool-container {
+        padding: 22px;
+    }
 
-.bmi-faq {
-    margin-top: 30px;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-}
+    .bmi-table > div {
+        grid-template-columns: 1fr 1fr;
+        padding: 12px;
+        font-size: 14px;
+    }
 
-.bmi-faq h2 {
-    text-align: center;
-    margin-bottom: 25px;
-}
+    .quality-row {
+        flex-wrap: wrap;
+    }
 
-.faq-item {
-    padding: 18px 0;
-    border-bottom: 1px solid #eee;
-}
+    footer {
+        padding: 28px 15px;
+    }
 
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-item h3 {
-    margin-bottom: 8px;
-    font-size: 17px;
+    .footer-links a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
 }
 
-.faq-item p {
-    margin: 0;
-    color: #666;
-    line-height: 1.6;
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .tool-card h3 {
+        font-size: 18px;
+    }
+
+    .calculator-box,
+    .counter-box,
+    .password-box,
+    .qr-box,
+    .compressor-box {
+        padding: 20px 15px;
+    }
 }
