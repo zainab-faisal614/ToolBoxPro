@@ -1,104 +1,328 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Age Calculator - Calculate Your Age | ToolBoxPro</title>
-    <meta name="description" content="Use the free ToolBoxPro Age Calculator to calculate your exact age in years, months, and days.">
-    <meta name="keywords" content="age calculator, calculate age, birthday calculator, exact age calculator">
+    <!-- SEO Title -->
+    <title>Age Calculator - Calculate Exact Age Online | ToolBoxPro</title>
 
+    <!-- SEO Description -->
+    <meta
+        name="description"
+        content="Use ToolBoxPro's free age calculator to calculate your exact age in years, months and days from your date of birth."
+    >
+
+    <!-- SEO Keywords -->
+    <meta
+        name="keywords"
+        content="age calculator, calculate age, exact age calculator, birthday calculator, age calculator online, date of birth calculator, free age calculator"
+    >
+
+    <meta name="author" content="ToolBoxPro">
+
+    <!-- Canonical URL -->
+    <link
+        rel="canonical"
+        href="https://zainab-faisal614.github.io/ToolBoxPro/tools/age.html"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Age Calculator - Calculate Exact Age Online | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate your exact age in years, months and days with ToolBoxPro's free online age calculator."
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/age.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>ToolBoxPro</h1>
-        <p>Free Online Tools</p>
+
+        <div class="logo">
+            ToolBoxPro
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../pages/about.html">About</a>
+        </nav>
+
     </header>
+
 
     <main class="tool-page">
 
-        <h2>Age Calculator</h2>
+        <!-- Age Calculator -->
+        <div class="tool-header">
 
-        <p>
-            Enter your date of birth to calculate your age in years, months, and days.
-        </p>
+            <span class="tool-icon">
+                🎂
+            </span>
 
-        <label for="birthDate">Date of Birth:</label>
-        <input type="date" id="birthDate">
+            <h1>
+                Age Calculator
+            </h1>
 
-        <button id="calculateAge">Calculate Age</button>
-
-        <div id="result"></div>
-
-        <section>
-            <h2>How to Calculate Your Age</h2>
             <p>
-                Select your date of birth and click the Calculate Age button.
-                The calculator will show your age based on today's date.
+                Enter your date of birth to calculate your exact age
+                in years, months, and days.
             </p>
+
+        </div>
+
+
+        <!-- Calculator -->
+        <div class="calculator-box">
+
+            <label for="birthDate">
+                Date of Birth
+            </label>
+
+            <input
+                type="date"
+                id="birthDate"
+            >
+
+            <button id="calculateAge">
+                Calculate Age
+            </button>
+
+            <div
+                id="result"
+                class="result"
+            >
+                Your age will appear here
+            </div>
+
+        </div>
+
+
+        <!-- How to Use -->
+        <section class="tool-info">
+
+            <h2>
+                How to Calculate Your Age
+            </h2>
+
+            <p>
+                Select your date of birth and click the Calculate Age
+                button. The calculator will calculate your age based
+                on today's date.
+            </p>
+
         </section>
 
-        <section>
-            <h2>Why Use an Age Calculator?</h2>
+
+        <!-- Why Use -->
+        <section class="tool-info">
+
+            <h2>
+                Why Use an Age Calculator?
+            </h2>
+
             <p>
-                An age calculator makes it easy to find your exact age quickly
-                without doing manual date calculations.
+                An age calculator makes it easy to find your exact age
+                quickly without doing manual date calculations.
             </p>
+
         </section>
 
-        <a href="../index.html">← Back to ToolBoxPro</a>
+
+        <!-- FAQ -->
+        <section class="tool-info">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+            <h3>
+                How does the age calculator work?
+            </h3>
+
+            <p>
+                Enter your date of birth and the calculator compares it
+                with today's date to calculate your age in years, months,
+                and days.
+            </p>
+
+            <h3>
+                Is this age calculator free?
+            </h3>
+
+            <p>
+                Yes. ToolBoxPro's age calculator is completely free
+                to use and does not require an account.
+            </p>
+
+            <h3>
+                Can I calculate my exact age?
+            </h3>
+
+            <p>
+                Yes. The calculator provides your age in years, months,
+                and days based on your selected date of birth.
+            </p>
+
+        </section>
+
+
+        <!-- Back Link -->
+        <a
+            href="../index.html"
+            class="back-link"
+        >
+            ← Back to All Tools
+        </a>
 
     </main>
 
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 ToolBoxPro. All rights reserved.</p>
+
+        <p>
+            © 2026 ToolBoxPro. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
     </footer>
 
+
+    <!-- Age Calculator Script -->
     <script>
-        document.getElementById("calculateAge").addEventListener("click", function () {
 
-            const birthDate = new Date(document.getElementById("birthDate").value);
-            const today = new Date();
-            const result = document.getElementById("result");
+        document
+            .getElementById("calculateAge")
+            .addEventListener("click", function () {
 
-            if (!document.getElementById("birthDate").value) {
-                result.innerText = "Please select your date of birth.";
-                return;
-            }
+                const birthDateInput =
+                    document.getElementById("birthDate");
 
-            if (birthDate > today) {
-                result.innerText = "Date of birth cannot be in the future.";
-                return;
-            }
+                const birthDate =
+                    new Date(birthDateInput.value);
 
-            let years = today.getFullYear() - birthDate.getFullYear();
-            let months = today.getMonth() - birthDate.getMonth();
-            let days = today.getDate() - birthDate.getDate();
+                const today =
+                    new Date();
 
-            if (days < 0) {
-                months--;
-                days += new Date(
-                    today.getFullYear(),
-                    today.getMonth(),
-                    0
-                ).getDate();
-            }
+                const result =
+                    document.getElementById("result");
 
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
 
-            result.innerText =
-                "Your age is " +
-                years + " years, " +
-                months + " months, and " +
-                days + " days.";
-        });
+                if (!birthDateInput.value) {
+
+                    result.innerText =
+                        "Please select your date of birth.";
+
+                    return;
+                }
+
+
+                if (birthDate > today) {
+
+                    result.innerText =
+                        "Date of birth cannot be in the future.";
+
+                    return;
+                }
+
+
+                let years =
+                    today.getFullYear() -
+                    birthDate.getFullYear();
+
+                let months =
+                    today.getMonth() -
+                    birthDate.getMonth();
+
+                let days =
+                    today.getDate() -
+                    birthDate.getDate();
+
+
+                if (days < 0) {
+
+                    months--;
+
+                    days += new Date(
+                        today.getFullYear(),
+                        today.getMonth(),
+                        0
+                    ).getDate();
+
+                }
+
+
+                if (months < 0) {
+
+                    years--;
+
+                    months += 12;
+
+                }
+
+
+                result.innerText =
+                    "Your age is " +
+                    years +
+                    " years, " +
+                    months +
+                    " months, and " +
+                    days +
+                    " days.";
+
+            });
+
     </script>
 
 </body>
+
 </html>
+
