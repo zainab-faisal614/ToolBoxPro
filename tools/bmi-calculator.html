@@ -2,27 +2,85 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO Title -->
     <title>Free BMI Calculator - Calculate Your BMI | ToolBoxPro</title>
 
+    <!-- SEO Description -->
     <meta
         name="description"
-        content="Use ToolBoxPro's free BMI calculator to calculate your Body Mass Index using metric or imperial units."
+        content="Use ToolBoxPro's free BMI calculator to calculate your Body Mass Index using metric or imperial units. Fast, simple and easy to use."
     >
 
+    <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="BMI calculator, free BMI calculator, calculate BMI, online BMI calculator, body mass index"
+        content="ToolBoxPro BMI calculator, BMI calculator, free BMI calculator, calculate BMI, online BMI calculator, body mass index calculator"
     >
 
     <meta name="author" content="ToolBoxPro">
 
+    <meta name="robots" content="index, follow">
+
+    <!-- Correct Canonical URL -->
     <link
         rel="canonical"
-        href="https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi.html"
+        href="https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi-calculator.html"
     >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Free BMI Calculator | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate your BMI quickly using metric or imperial units with ToolBoxPro's free online BMI calculator."
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi-calculator.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="ToolBoxPro"
+    >
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Free BMI Calculator - ToolBoxPro",
+        "description": "Free online BMI calculator for calculating Body Mass Index using metric or imperial units.",
+        "url": "https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi-calculator.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "ToolBoxPro",
+            "url": "https://zainab-faisal614.github.io/ToolBoxPro/"
+        }
+    }
+    </script>
+
 
     <style>
 
@@ -38,6 +96,7 @@
             color: #222;
             line-height: 1.6;
         }
+
 
         /* =========================
            HEADER
@@ -73,6 +132,7 @@
             color: #007bff;
         }
 
+
         /* =========================
            MAIN
         ========================= */
@@ -82,6 +142,7 @@
             margin: 45px auto;
             padding: 0 20px;
         }
+
 
         /* =========================
            BACK LINKS
@@ -109,6 +170,7 @@
             background: #007bff;
             color: #ffffff;
         }
+
 
         /* =========================
            TOOL CONTAINER
@@ -141,6 +203,7 @@
             margin: 0 auto 30px;
         }
 
+
         /* =========================
            UNIT BUTTONS
         ========================= */
@@ -166,6 +229,7 @@
             background: #007bff;
             color: #ffffff;
         }
+
 
         /* =========================
            FORM
@@ -193,6 +257,7 @@
             outline: none;
             border-color: #007bff;
         }
+
 
         /* =========================
            ACTION BUTTONS
@@ -232,6 +297,7 @@
             background: #dce3ee;
         }
 
+
         /* =========================
            RESULT
         ========================= */
@@ -248,6 +314,7 @@
         .result h2 {
             margin-bottom: 5px;
         }
+
 
         /* =========================
            BMI INFO
@@ -287,6 +354,7 @@
             font-size: 14px;
         }
 
+
         /* =========================
            FAQ
         ========================= */
@@ -315,6 +383,7 @@
             color: #666;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
@@ -326,6 +395,22 @@
             margin-top: 40px;
             color: #666;
         }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
 
         /* =========================
            MOBILE
@@ -409,7 +494,7 @@
     <main>
 
 
-        <!-- BACK BUTTONS -->
+        <!-- BACK LINKS -->
 
         <div class="back-links">
 
@@ -428,16 +513,13 @@
 
         <div class="tool-container">
 
-
             <h1>
                 BMI Calculator
             </h1>
 
-
             <p class="subtitle">
                 Calculate your Body Mass Index using your height and weight.
             </p>
-
 
             <p class="tool-description">
                 Use this free BMI calculator to estimate your Body Mass Index
@@ -450,21 +532,26 @@
 
             <div class="unit-buttons">
 
-                <button onclick="showMetric()">
+                <button
+                    type="button"
+                    onclick="showMetric()"
+                >
                     cm / kg
                 </button>
 
-                <button onclick="showImperial()">
+                <button
+                    type="button"
+                    onclick="showImperial()"
+                >
                     ft / lbs
                 </button>
 
             </div>
 
 
-            <!-- METRIC -->
+            <!-- METRIC FORM -->
 
             <div id="metricForm">
-
 
                 <div class="form-group">
 
@@ -476,10 +563,10 @@
                         type="number"
                         id="heightCm"
                         placeholder="e.g. 170"
+                        min="1"
                     >
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -491,21 +578,20 @@
                         type="number"
                         id="weightKg"
                         placeholder="e.g. 65"
+                        min="1"
                     >
 
                 </div>
 
-
             </div>
 
 
-            <!-- IMPERIAL -->
+            <!-- IMPERIAL FORM -->
 
             <div
                 id="imperialForm"
                 style="display: none;"
             >
-
 
                 <div class="form-group">
 
@@ -517,10 +603,10 @@
                         type="number"
                         id="heightFt"
                         placeholder="e.g. 5"
+                        min="1"
                     >
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -532,10 +618,10 @@
                         type="number"
                         id="heightIn"
                         placeholder="e.g. 7"
+                        min="0"
                     >
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -547,10 +633,10 @@
                         type="number"
                         id="weightLbs"
                         placeholder="e.g. 143"
+                        min="1"
                     >
 
                 </div>
-
 
             </div>
 
@@ -560,6 +646,7 @@
             <div class="action-buttons">
 
                 <button
+                    type="button"
                     class="calculate-btn"
                     onclick="calculateBMI()"
                 >
@@ -567,6 +654,7 @@
                 </button>
 
                 <button
+                    type="button"
                     class="reset-btn"
                     onclick="resetBMI()"
                 >
@@ -581,6 +669,7 @@
             <div
                 id="result"
                 class="result"
+                aria-live="polite"
             ></div>
 
 
@@ -592,72 +681,40 @@
                     BMI Categories
                 </h2>
 
-
                 <table>
 
-                    <tr>
+                    <thead>
 
-                        <th>
-                            BMI Range
-                        </th>
+                        <tr>
+                            <th>BMI Range</th>
+                            <th>Category</th>
+                        </tr>
 
-                        <th>
-                            Category
-                        </th>
+                    </thead>
 
-                    </tr>
+                    <tbody>
 
+                        <tr>
+                            <td>Below 18.5</td>
+                            <td>Underweight</td>
+                        </tr>
 
-                    <tr>
+                        <tr>
+                            <td>18.5 – 24.9</td>
+                            <td>Normal weight</td>
+                        </tr>
 
-                        <td>
-                            Below 18.5
-                        </td>
+                        <tr>
+                            <td>25 – 29.9</td>
+                            <td>Overweight</td>
+                        </tr>
 
-                        <td>
-                            Underweight
-                        </td>
+                        <tr>
+                            <td>30 or above</td>
+                            <td>Obesity</td>
+                        </tr>
 
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            18.5 – 24.9
-                        </td>
-
-                        <td>
-                            Normal weight
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            25 – 29.9
-                        </td>
-
-                        <td>
-                            Overweight
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            30 or above
-                        </td>
-
-                        <td>
-                            Obesity
-                        </td>
-
-                    </tr>
+                    </tbody>
 
                 </table>
 
@@ -669,14 +726,12 @@
 
                 </div>
 
-
             </section>
 
 
             <!-- FAQ -->
 
             <section class="bmi-faq">
-
 
                 <h2>
                     Frequently Asked Questions
@@ -752,9 +807,7 @@
 
                 </div>
 
-
             </section>
-
 
         </div>
 
@@ -769,13 +822,28 @@
             © 2026 ToolBoxPro. All rights reserved.
         </p>
 
+        <div class="footer-links">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
     </footer>
 
 
     <!-- JAVASCRIPT -->
 
     <script>
-
 
         function showMetric() {
 
@@ -797,9 +865,7 @@
 
         function calculateBMI() {
 
-
             let bmi;
-
 
             const metricVisible =
                 document.getElementById("metricForm").style.display !== "none";
@@ -807,12 +873,10 @@
 
             if (metricVisible) {
 
-
                 const height =
                     parseFloat(
                         document.getElementById("heightCm").value
                     );
-
 
                 const weight =
                     parseFloat(
@@ -840,21 +904,19 @@
                     weight /
                     (heightMeters * heightMeters);
 
+            }
 
-            } else {
-
+            else {
 
                 const feet =
                     parseFloat(
                         document.getElementById("heightFt").value
                     );
 
-
                 const inches =
                     parseFloat(
                         document.getElementById("heightIn").value
                     ) || 0;
-
 
                 const weight =
                     parseFloat(
@@ -878,6 +940,15 @@
 
                 const totalInches =
                     (feet * 12) + inches;
+
+
+                if (totalInches <= 0) {
+
+                    alert("Please enter a valid height.");
+
+                    return;
+
+                }
 
 
                 bmi =
@@ -935,7 +1006,6 @@
 
         function resetBMI() {
 
-
             document.getElementById("heightCm").value = "";
 
             document.getElementById("weightKg").value = "";
@@ -946,14 +1016,11 @@
 
             document.getElementById("weightLbs").value = "";
 
-
             document.getElementById("result").style.display = "none";
-
 
             showMetric();
 
         }
-
 
     </script>
 
