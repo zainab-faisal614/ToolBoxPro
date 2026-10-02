@@ -8,21 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Title -->
-    <title>ToolBoxPro - Free Online Calculators & Useful Tools</title>
+    <title>ToolBoxPro - Free Online Tools & Calculators</title>
 
     <!-- SEO Description -->
     <meta
         name="description"
-        content="ToolBoxPro provides free online calculators and useful tools including percentage, age, BMI, word counter, password generator, QR code generator and image compressor."
+        content="ToolBoxPro offers free online tools and calculators including percentage, age, BMI, unit converter, word counter, password generator, QR code generator and image compressor."
     >
 
     <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="free online tools, online calculators, percentage calculator, age calculator, BMI calculator, word counter, password generator, QR code generator, image compressor"
+        content="ToolBoxPro, free online tools, online calculators, percentage calculator, age calculator, BMI calculator, unit converter, word counter, password generator, QR code generator, image compressor"
     >
 
     <meta name="author" content="ToolBoxPro">
+
+    <!-- Search Engine Instructions -->
+    <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
     <link
@@ -40,12 +43,12 @@
     <!-- Open Graph -->
     <meta
         property="og:title"
-        content="ToolBoxPro - Free Online Tools"
+        content="ToolBoxPro - Free Online Tools & Calculators"
     >
 
     <meta
         property="og:description"
-        content="Free and easy-to-use online calculators and digital tools for everyday tasks."
+        content="Free and easy-to-use online calculators and useful digital tools for everyday tasks."
     >
 
     <meta
@@ -57,6 +60,48 @@
         property="og:type"
         content="website"
     >
+
+    <meta
+        property="og:site_name"
+        content="ToolBoxPro"
+    >
+
+    <!-- Twitter / Social Sharing -->
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="ToolBoxPro - Free Online Tools & Calculators"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Free online calculators and useful tools for everyday digital tasks."
+    >
+
+    <!-- WebSite + Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "ToolBoxPro",
+                "alternateName": "ToolBoxPro - Free Online Tools",
+                "url": "https://zainab-faisal614.github.io/ToolBoxPro/"
+            },
+            {
+                "@type": "Organization",
+                "name": "ToolBoxPro",
+                "url": "https://zainab-faisal614.github.io/ToolBoxPro/",
+                "logo": "https://zainab-faisal614.github.io/ToolBoxPro/favicon.svg"
+            }
+        ]
+    }
+    </script>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -74,9 +119,19 @@
         </div>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#tools">Tools</a>
-            <a href="#about">About</a>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#tools">
+                Tools
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
         </nav>
 
     </header>
@@ -98,13 +153,17 @@
                 </h1>
 
                 <p>
-                    Calculate, create, convert and manage everyday tasks
-                    with simple online tools — no complicated software required.
+                    ToolBoxPro provides free online calculators and useful
+                    digital tools to help you calculate, create, convert
+                    and manage everyday tasks quickly and easily.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#tools" class="btn">
+                    <a
+                        href="#tools"
+                        class="btn"
+                    >
                         Explore Tools
                     </a>
 
@@ -126,11 +185,12 @@
         <section id="tools" class="tools-section">
 
             <h2>
-                Our Free Tools
+                Free Online Tools
             </h2>
 
             <p class="tools-intro">
-                Useful online tools designed to make your everyday tasks
+                Explore our collection of free online calculators and
+                useful digital tools designed to make everyday tasks
                 easier, faster and more convenient.
             </p>
 
@@ -141,6 +201,7 @@
                 id="toolSearch"
                 placeholder="Search a tool..."
                 class="tool-search"
+                aria-label="Search online tools"
             >
 
 
@@ -155,7 +216,8 @@
                     </h3>
 
                     <p>
-                        Calculate percentages quickly and easily.
+                        Calculate percentages quickly and easily for
+                        everyday calculations.
                     </p>
 
                     <a
@@ -176,7 +238,7 @@
                     </h3>
 
                     <p>
-                        Calculate your exact age in years, months, and days.
+                        Calculate your exact age in years, months and days.
                     </p>
 
                     <a
@@ -197,11 +259,34 @@
                     </h3>
 
                     <p>
-                        Calculate your Body Mass Index quickly and easily.
+                        Calculate Body Mass Index using metric or
+                        imperial measurements.
                     </p>
 
                     <a
                         href="tools/bmi-calculator.html"
+                        class="tool-btn"
+                    >
+                        Use Tool
+                    </a>
+
+                </div>
+
+
+                <!-- Unit Converter -->
+                <div class="tool-card">
+
+                    <h3>
+                        🔄 Unit Converter
+                    </h3>
+
+                    <p>
+                        Convert length, weight, temperature and area
+                        units quickly and easily.
+                    </p>
+
+                    <a
+                        href="tools/unit-converter.html"
                         class="tool-btn"
                     >
                         Use Tool
@@ -218,7 +303,8 @@
                     </h3>
 
                     <p>
-                        Count words and characters in your text.
+                        Count words, characters, sentences and more
+                        in your text.
                     </p>
 
                     <a
@@ -239,7 +325,7 @@
                     </h3>
 
                     <p>
-                        Create strong and secure passwords.
+                        Generate strong and secure passwords quickly.
                     </p>
 
                     <a
@@ -260,7 +346,8 @@
                     </h3>
 
                     <p>
-                        Create QR codes quickly from your text or links.
+                        Create QR codes from text, URLs and links
+                        quickly and easily.
                     </p>
 
                     <a
@@ -281,7 +368,8 @@
                     </h3>
 
                     <p>
-                        Reduce image size while keeping good quality.
+                        Compress images and reduce file size while
+                        maintaining good quality.
                     </p>
 
                     <a
@@ -307,9 +395,9 @@
             </h2>
 
             <p>
-                ToolBoxPro is a collection of simple, fast and free online
-                tools designed to make everyday digital tasks easier,
-                faster and more convenient.
+                ToolBoxPro is a collection of simple, fast and free
+                online tools designed to make everyday digital tasks
+                easier, faster and more convenient.
             </p>
 
             <a

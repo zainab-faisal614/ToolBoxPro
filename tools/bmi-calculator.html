@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Free BMI Calculator - Calculate Your BMI | ToolBoxPro</title>
@@ -19,9 +21,37 @@
 
     <meta name="author" content="ToolBoxPro">
 
+    <meta name="robots" content="index, follow">
+
     <link
         rel="canonical"
-        href="https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi.html"
+        href="https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi-calculator.html"
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <meta
+        property="og:title"
+        content="Free BMI Calculator | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate your BMI easily using metric or imperial units with ToolBoxPro's free BMI calculator."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/bmi-calculator.html"
     >
 
     <style>
@@ -53,9 +83,14 @@
         }
 
         .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #111;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            font-size: 25px !important;
+            font-weight: 700 !important;
+            color: #007bff !important;
+            text-decoration: none;
+            white-space: nowrap;
         }
 
         nav {
@@ -327,6 +362,16 @@
             color: #666;
         }
 
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 6px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
         /* =========================
            MOBILE
         ========================= */
@@ -381,9 +426,12 @@
 
     <header>
 
-        <div class="logo">
+        <a
+            href="../index.html"
+            class="logo"
+        >
             ToolBoxPro
-        </div>
+        </a>
 
         <nav>
 
@@ -409,8 +457,6 @@
     <main>
 
 
-        <!-- BACK BUTTONS -->
-
         <div class="back-links">
 
             <a href="../index.html">
@@ -423,8 +469,6 @@
 
         </div>
 
-
-        <!-- TOOL -->
 
         <div class="tool-container">
 
@@ -465,7 +509,6 @@
 
             <div id="metricForm">
 
-
                 <div class="form-group">
 
                     <label for="heightCm">
@@ -495,7 +538,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -505,7 +547,6 @@
                 id="imperialForm"
                 style="display: none;"
             >
-
 
                 <div class="form-group">
 
@@ -550,7 +591,6 @@
                     >
 
                 </div>
-
 
             </div>
 
@@ -669,14 +709,12 @@
 
                 </div>
 
-
             </section>
 
 
             <!-- FAQ -->
 
             <section class="bmi-faq">
-
 
                 <h2>
                     Frequently Asked Questions
@@ -752,7 +790,6 @@
 
                 </div>
 
-
             </section>
 
 
@@ -769,13 +806,28 @@
             © 2026 ToolBoxPro. All rights reserved.
         </p>
 
+        <p style="margin-top: 8px;">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </p>
+
     </footer>
 
 
     <!-- JAVASCRIPT -->
 
     <script>
-
 
         function showMetric() {
 
@@ -797,9 +849,7 @@
 
         function calculateBMI() {
 
-
             let bmi;
-
 
             const metricVisible =
                 document.getElementById("metricForm").style.display !== "none";
@@ -807,12 +857,10 @@
 
             if (metricVisible) {
 
-
                 const height =
                     parseFloat(
                         document.getElementById("heightCm").value
                     );
-
 
                 const weight =
                     parseFloat(
@@ -843,18 +891,15 @@
 
             } else {
 
-
                 const feet =
                     parseFloat(
                         document.getElementById("heightFt").value
                     );
 
-
                 const inches =
                     parseFloat(
                         document.getElementById("heightIn").value
                     ) || 0;
-
 
                 const weight =
                     parseFloat(
@@ -897,21 +942,15 @@
 
                 category = "Underweight";
 
-            }
-
-            else if (bmi < 25) {
+            } else if (bmi < 25) {
 
                 category = "Normal weight";
 
-            }
-
-            else if (bmi < 30) {
+            } else if (bmi < 30) {
 
                 category = "Overweight";
 
-            }
-
-            else {
+            } else {
 
                 category = "Obesity";
 
@@ -935,7 +974,6 @@
 
         function resetBMI() {
 
-
             document.getElementById("heightCm").value = "";
 
             document.getElementById("weightKg").value = "";
@@ -946,14 +984,11 @@
 
             document.getElementById("weightLbs").value = "";
 
-
             document.getElementById("result").style.display = "none";
-
 
             showMetric();
 
         }
-
 
     </script>
 

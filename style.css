@@ -1284,3 +1284,70 @@ button {
         padding: 20px 15px;
     }
 }
+/* Tool Page Back Navigation */
+
+.page-back-links {
+    max-width: 900px;
+    margin: 25px auto 10px;
+    padding: 14px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-back-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.page-back-links a:hover {
+    text-decoration: underline;
+    transform: translateX(-2px);
+}
+/* =========================
+   TOOL PAGE BACK LINKS
+========================= */
+
+.back-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.back-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    background: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.back-links a:hover {
+    background: #007bff;
+    color: #ffffff;
+}
+
+@media (max-width: 650px) {
+
+    .back-links {
+        flex-direction: column;
+    }
+
+    .back-links a {
+        text-align: center;
+    }
+
+}

@@ -2,30 +2,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO Title -->
     <title>Image Compressor - Compress Images Online | ToolBoxPro</title>
 
+    <!-- SEO Description -->
     <meta
         name="description"
-        content="Compress images online for free with ToolBoxPro. Reduce image file size, adjust compression quality and download your compressed image."
+        content="Compress images online for free with ToolBoxPro. Reduce image file size while maintaining good image quality."
     >
 
+    <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="image compressor, compress image online, reduce image size, image size reducer, free image compressor"
+        content="image compressor, compress image online, image size reducer, reduce image size, free image compressor, online image compressor"
     >
 
     <meta name="author" content="ToolBoxPro">
 
+    <!-- Canonical URL -->
     <link
         rel="canonical"
         href="https://zainab-faisal614.github.io/ToolBoxPro/tools/compressor.html"
     >
 
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Image Compressor - Compress Images Online | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Compress and reduce image file size quickly with ToolBoxPro's free online image compressor."
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/compressor.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
@@ -47,7 +84,21 @@
 
     <main>
 
-        <!-- Tool Section -->
+        <!-- Back Links -->
+        <div class="back-links">
+
+            <a href="../index.html">
+                ← Back to Home
+            </a>
+
+            <a href="../index.html#tools">
+                ← Back to Tools
+            </a>
+
+        </div>
+
+
+        <!-- Image Compressor -->
         <section class="tool-page">
 
             <div class="tool-header">
@@ -61,18 +112,18 @@
                 </h1>
 
                 <p>
-                    Compress images online and reduce file size while
+                    Compress and reduce image file size online while
                     maintaining good image quality.
                 </p>
 
             </div>
 
 
-            <!-- Compressor -->
-            <div class="compressor-box">
+            <!-- Compressor Box -->
+            <div class="calculator-box">
 
                 <label for="imageInput">
-                    Choose an Image
+                    Select an Image
                 </label>
 
                 <input
@@ -86,149 +137,185 @@
                     Compression Quality
                 </label>
 
-                <div class="quality-row">
+                <input
+                    type="range"
+                    id="quality"
+                    min="10"
+                    max="100"
+                    value="70"
+                >
 
-                    <input
-                        type="range"
-                        id="quality"
-                        min="10"
-                        max="100"
-                        value="70"
-                    >
-
-                    <span id="qualityValue">
-                        70%
-                    </span>
-
-                </div>
+                <p>
+                    Quality:
+                    <strong id="qualityValue">70%</strong>
+                </p>
 
 
-                <button onclick="compressImage()">
+                <button
+                    type="button"
+                    onclick="compressImage()"
+                >
                     Compress Image
                 </button>
 
 
                 <div
                     id="result"
-                    class="compress-result"
-                ></div>
+                    class="result"
+                >
+                    Select an image to begin.
+                </div>
+
+
+                <a
+                    id="downloadLink"
+                    class="download-button"
+                    style="display: none;"
+                >
+                    Download Compressed Image
+                </a>
+
+            </div>
+
+
+            <!-- Preview -->
+            <div
+                id="preview"
+                class="tool-info"
+                style="display: none;"
+            >
+
+                <h2>
+                    Image Preview
+                </h2>
+
+                <img
+                    id="previewImage"
+                    alt="Compressed image preview"
+                    style="
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                    "
+                >
 
             </div>
 
 
             <!-- How to Use -->
-            <div class="tool-info">
+            <section class="tool-info">
 
                 <h2>
-                    How to Compress an Image
+                    How to Use the Image Compressor
                 </h2>
 
                 <p>
-                    Compressing an image with ToolBoxPro is simple:
+                    Select an image from your device and choose the desired
+                    compression quality using the slider.
                 </p>
 
-                <ol>
-                    <li>Choose an image from your device.</li>
-                    <li>Select your preferred compression quality.</li>
-                    <li>Click the <strong>Compress Image</strong> button.</li>
-                    <li>Check the original and compressed file sizes.</li>
-                    <li>Download your compressed image.</li>
-                </ol>
+                <p>
+                    Click <strong>Compress Image</strong> to reduce the
+                    image file size. Once compression is complete, you can
+                    download the compressed image.
+                </p>
 
-            </div>
+            </section>
 
 
             <!-- Why Compress Images -->
-            <div class="tool-info">
+            <section class="tool-info">
 
                 <h2>
                     Why Compress Images?
                 </h2>
 
                 <p>
-                    Large image files can take longer to upload, download
-                    and load on websites. Compressing images can help reduce
-                    file size and make them easier to share or use online.
+                    Compressing images can reduce file size, which may help
+                    save storage space and make images easier to upload,
+                    share, and use on websites.
                 </p>
 
-                <ul>
-                    <li>Reduce image file size</li>
-                    <li>Improve website loading performance</li>
-                    <li>Make images easier to upload and share</li>
-                    <li>Save storage space</li>
-                </ul>
-
-            </div>
+            </section>
 
 
-            <!-- Privacy -->
-            <div class="tool-info">
+            <!-- Example -->
+            <section class="tool-info">
 
                 <h2>
-                    Is This Image Compressor Private?
+                    Image Compression Example
                 </h2>
 
                 <p>
-                    This basic image compressor processes the selected image
-                    directly in your browser. Your image does not need to be
-                    uploaded to a server for the compression process.
+                    For example, a large image file may be compressed to a
+                    smaller file size while keeping acceptable visual
+                    quality.
                 </p>
 
-            </div>
+                <p>
+                    The final file size depends on the original image,
+                    format, dimensions, and selected compression quality.
+                </p>
+
+            </section>
+
+
+            <!-- Privacy -->
+            <section class="tool-info">
+
+                <h2>
+                    Privacy
+                </h2>
+
+                <p>
+                    Image compression is performed directly in your
+                    browser. Your image does not need to be uploaded to
+                    a server to use this tool.
+                </p>
+
+            </section>
 
 
             <!-- FAQ -->
-            <div class="tool-info">
+            <section class="tool-info">
 
                 <h2>
                     Frequently Asked Questions
                 </h2>
+
+
+                <h3>
+                    What is an image compressor?
+                </h3>
+
+                <p>
+                    An image compressor reduces the file size of an image
+                    while attempting to maintain useful visual quality.
+                </p>
+
+
+                <h3>
+                    Does image compression reduce quality?
+                </h3>
+
+                <p>
+                    Depending on the compression level, image quality may
+                    decrease slightly. Higher quality settings generally
+                    preserve more visual detail.
+                </p>
+
 
                 <h3>
                     Is this image compressor free?
                 </h3>
 
                 <p>
-                    Yes. ToolBoxPro provides this image compressor as a free
-                    online tool.
+                    Yes. ToolBoxPro provides this image compressor free of
+                    charge and no account is required.
                 </p>
 
-
-                <h3>
-                    What image files can I select?
-                </h3>
-
-                <p>
-                    You can select common image formats supported by your
-                    browser, including JPG, PNG and other image types.
-                </p>
-
-
-                <h3>
-                    Can I control the compression quality?
-                </h3>
-
-                <p>
-                    Yes. Use the quality slider to choose a compression
-                    level between 10% and 100%.
-                </p>
-
-
-                <h3>
-                    Does compression always make the file smaller?
-                </h3>
-
-                <p>
-                    Not always. The final file size depends on the original
-                    image, its format and the selected compression quality.
-                </p>
-
-            </div>
-
-
-            <a href="../index.html" class="back-link">
-                ← Back to All Tools
-            </a>
+            </section>
 
         </section>
 
@@ -261,43 +348,75 @@
     </footer>
 
 
+    <!-- Image Compressor Script -->
     <script>
 
-        const quality =
+        const qualitySlider =
             document.getElementById("quality");
 
         const qualityValue =
             document.getElementById("qualityValue");
 
 
-        quality.addEventListener("input", function () {
+        qualitySlider.addEventListener(
+            "input",
+            function () {
 
-            qualityValue.innerText =
-                quality.value + "%";
+                qualityValue.textContent =
+                    this.value + "%";
 
-        });
+            }
+        );
 
 
         function compressImage() {
 
-            const fileInput =
+            const imageInput =
                 document.getElementById("imageInput");
 
             const result =
                 document.getElementById("result");
 
+            const downloadLink =
+                document.getElementById("downloadLink");
 
-            if (fileInput.files.length === 0) {
+            const preview =
+                document.getElementById("preview");
 
-                result.innerHTML =
-                    "<p>Please choose an image first.</p>";
+            const previewImage =
+                document.getElementById("previewImage");
+
+            const quality =
+                parseInt(
+                    qualitySlider.value
+                ) / 100;
+
+
+            if (
+                !imageInput.files ||
+                imageInput.files.length === 0
+            ) {
+
+                result.textContent =
+                    "Please select an image first.";
 
                 return;
+
             }
 
 
             const file =
-                fileInput.files[0];
+                imageInput.files[0];
+
+
+            if (!file.type.startsWith("image/")) {
+
+                result.textContent =
+                    "Please select a valid image file.";
+
+                return;
+
+            }
 
 
             const reader =
@@ -306,92 +425,156 @@
 
             reader.onload = function (event) {
 
-                const image =
+                const img =
                     new Image();
 
 
-                image.onload = function () {
+                img.onload = function () {
 
                     const canvas =
                         document.createElement("canvas");
 
-                    const context =
+                    const ctx =
                         canvas.getContext("2d");
 
 
                     canvas.width =
-                        image.width;
+                        img.width;
 
                     canvas.height =
-                        image.height;
+                        img.height;
 
 
-                    context.drawImage(
-                        image,
+                    ctx.drawImage(
+                        img,
                         0,
-                        0
+                        0,
+                        canvas.width,
+                        canvas.height
                     );
-
-
-                    const compressionQuality =
-                        parseInt(quality.value) / 100;
 
 
                     canvas.toBlob(
                         function (blob) {
 
+                            if (!blob) {
+
+                                result.textContent =
+                                    "Unable to compress this image.";
+
+                                return;
+
+                            }
+
+
                             const compressedSize =
-                                (blob.size / 1024).toFixed(2);
+                                formatFileSize(
+                                    blob.size
+                                );
 
                             const originalSize =
-                                (file.size / 1024).toFixed(2);
+                                formatFileSize(
+                                    file.size
+                                );
 
 
-                            const downloadUrl =
-                                URL.createObjectURL(blob);
+                            const compression =
+                                Math.max(
+                                    0,
+                                    (
+                                        1 -
+                                        blob.size /
+                                        file.size
+                                    ) * 100
+                                );
 
 
-                            result.innerHTML = `
+                            result.innerHTML =
+                                "Original size: " +
+                                originalSize +
+                                "<br>" +
+                                "Compressed size: " +
+                                compressedSize +
+                                "<br>" +
+                                "Size reduced by: " +
+                                compression.toFixed(1) +
+                                "%";
 
-                                <div class="compression-result">
 
-                                    <p>
-                                        <strong>Original Size:</strong>
-                                        ${originalSize} KB
-                                    </p>
+                            const url =
+                                URL.createObjectURL(
+                                    blob
+                                );
 
-                                    <p>
-                                        <strong>Compressed Size:</strong>
-                                        ${compressedSize} KB
-                                    </p>
 
-                                    <a
-                                        href="${downloadUrl}"
-                                        download="compressed-image.jpg"
-                                        class="download-btn"
-                                    >
-                                        Download Compressed Image
-                                    </a>
+                            downloadLink.href =
+                                url;
 
-                                </div>
+                            downloadLink.download =
+                                "compressed-" +
+                                file.name;
 
-                            `;
+                            downloadLink.style.display =
+                                "inline-block";
+
+
+                            previewImage.src =
+                                url;
+
+                            preview.style.display =
+                                "block";
 
                         },
                         "image/jpeg",
-                        compressionQuality
+                        quality
                     );
 
                 };
 
 
-                image.src =
+                img.src =
                     event.target.result;
 
             };
 
 
             reader.readAsDataURL(file);
+
+        }
+
+
+        function formatFileSize(bytes) {
+
+            if (bytes === 0) {
+                return "0 Bytes";
+            }
+
+
+            const units = [
+                "Bytes",
+                "KB",
+                "MB",
+                "GB"
+            ];
+
+
+            const i =
+                Math.floor(
+                    Math.log(bytes) /
+                    Math.log(1024)
+                );
+
+
+            return (
+                parseFloat(
+                    (
+                        bytes /
+                        Math.pow(1024, i)
+                    ).toFixed(2)
+                ) +
+                " " +
+                units[i]
+            );
 
         }
 

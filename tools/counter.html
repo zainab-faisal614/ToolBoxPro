@@ -2,28 +2,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Word & Character Counter - Free Online Tool | ToolBoxPro</title>
+    <!-- SEO Title -->
+    <title>Word Counter - Free Word & Character Counter | ToolBoxPro</title>
 
+    <!-- SEO Description -->
     <meta
         name="description"
-        content="Use ToolBoxPro's free word and character counter to count words, characters and characters without spaces instantly."
+        content="Count words, characters, sentences, and paragraphs easily with ToolBoxPro's free online word counter."
     >
 
+    <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="word counter, character counter, word count, character count, online word counter, free word counter"
+        content="word counter, character counter, word count, online word counter, free word counter, character count"
     >
 
+    <meta name="author" content="ToolBoxPro">
+
+    <!-- Canonical URL -->
     <link
         rel="canonical"
         href="https://zainab-faisal614.github.io/ToolBoxPro/tools/counter.html"
     >
 
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Word Counter - Free Word & Character Counter | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Count words and characters quickly with ToolBoxPro's free online word counter."
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/counter.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
@@ -45,6 +84,20 @@
 
     <main>
 
+        <!-- Back Links -->
+        <div class="back-links">
+
+            <a href="../index.html">
+                ← Back to Home
+            </a>
+
+            <a href="../index.html#tools">
+                ← Back to Tools
+            </a>
+
+        </div>
+
+
         <!-- Word Counter -->
         <section class="tool-page">
 
@@ -59,39 +112,58 @@
                 </h1>
 
                 <p>
-                    Count words, characters and characters without spaces
-                    instantly with this free online counter.
+                    Count words and characters quickly and easily with this
+                    free online word counter.
                 </p>
 
             </div>
 
 
-            <div class="counter-box">
+            <!-- Counter Box -->
+            <div class="calculator-box">
+
+                <label for="textInput">
+                    Enter or Paste Your Text
+                </label>
 
                 <textarea
                     id="textInput"
+                    rows="10"
                     placeholder="Type or paste your text here..."
                 ></textarea>
 
 
                 <div class="counter-results">
 
-                    <div class="counter-item">
-                        <span id="wordCount">0</span>
-                        <small>Words</small>
+                    <div class="result">
+                        Words:
+                        <strong id="wordCount">0</strong>
                     </div>
 
-                    <div class="counter-item">
-                        <span id="charCount">0</span>
-                        <small>Characters</small>
+                    <div class="result">
+                        Characters:
+                        <strong id="characterCount">0</strong>
                     </div>
 
-                    <div class="counter-item">
-                        <span id="charNoSpace">0</span>
-                        <small>Without Spaces</small>
+                    <div class="result">
+                        Characters (without spaces):
+                        <strong id="characterNoSpaceCount">0</strong>
+                    </div>
+
+                    <div class="result">
+                        Sentences:
+                        <strong id="sentenceCount">0</strong>
                     </div>
 
                 </div>
+
+
+                <button
+                    type="button"
+                    onclick="clearText()"
+                >
+                    Clear
+                </button>
 
             </div>
 
@@ -104,53 +176,31 @@
                 </h2>
 
                 <p>
-                    Type or paste your text into the box above. The tool
-                    automatically counts the number of words and characters
-                    as you type.
-                </p>
-
-                <p>
-                    It also shows the character count without spaces, which
-                    can be useful when working with character limits.
+                    Type or paste your text into the text box above.
+                    ToolBoxPro will automatically count the number of words,
+                    characters, characters without spaces, and sentences.
                 </p>
 
             </section>
 
 
-            <!-- What It Counts -->
+            <!-- Why Use -->
             <section class="tool-info">
 
                 <h2>
-                    What Does This Tool Count?
+                    Why Use a Word Counter?
                 </h2>
 
-                <h3>
-                    Words
-                </h3>
-
                 <p>
-                    The word counter counts individual words separated by
-                    spaces or other whitespace characters.
+                    A word counter is useful for students, writers,
+                    bloggers, freelancers, content creators, and anyone
+                    who needs to check the length of their text.
                 </p>
 
-
-                <h3>
-                    Characters
-                </h3>
-
                 <p>
-                    The character counter counts all characters in your
-                    text, including spaces.
-                </p>
-
-
-                <h3>
-                    Characters Without Spaces
-                </h3>
-
-                <p>
-                    This count removes spaces and other whitespace
-                    characters from the total.
+                    It can help you stay within word or character limits
+                    for assignments, articles, social media posts,
+                    applications, and other written content.
                 </p>
 
             </section>
@@ -169,13 +219,13 @@
 
                 <p>
                     <strong>
-                        ToolBoxPro makes online tasks easier.
+                        ToolBoxPro provides free online tools.
                     </strong>
                 </p>
 
                 <p>
-                    The tool will automatically display the number of words
-                    and characters in the text.
+                    The counter will automatically show the total number
+                    of words and characters in the text.
                 </p>
 
             </section>
@@ -188,41 +238,37 @@
                     Frequently Asked Questions
                 </h2>
 
+
+                <h3>
+                    What is a word counter?
+                </h3>
+
+                <p>
+                    A word counter is an online tool that counts the number
+                    of words in a piece of text.
+                </p>
+
+
+                <h3>
+                    Can I count characters too?
+                </h3>
+
+                <p>
+                    Yes. ToolBoxPro counts both total characters and
+                    characters without spaces.
+                </p>
+
+
                 <h3>
                     Is this word counter free?
                 </h3>
 
                 <p>
-                    Yes. ToolBoxPro's word and character counter is free to
-                    use and does not require an account.
-                </p>
-
-
-                <h3>
-                    Does the counter work while I type?
-                </h3>
-
-                <p>
-                    Yes. Word and character counts update automatically as
-                    you type or edit your text.
-                </p>
-
-
-                <h3>
-                    Can I paste text into the counter?
-                </h3>
-
-                <p>
-                    Yes. You can type text directly or paste existing text
-                    into the text box.
+                    Yes. ToolBoxPro's word counter is completely free
+                    and does not require an account.
                 </p>
 
             </section>
-
-
-            <a href="../index.html" class="back-link">
-                ← Back to All Tools
-            </a>
 
         </section>
 
@@ -255,6 +301,7 @@
     </footer>
 
 
+    <!-- Word Counter Script -->
     <script>
 
         const textInput =
@@ -263,44 +310,73 @@
         const wordCount =
             document.getElementById("wordCount");
 
-        const charCount =
-            document.getElementById("charCount");
+        const characterCount =
+            document.getElementById("characterCount");
 
-        const charNoSpace =
-            document.getElementById("charNoSpace");
+        const characterNoSpaceCount =
+            document.getElementById("characterNoSpaceCount");
 
-
-        textInput.addEventListener("input", function () {
-
-            const text = textInput.value;
+        const sentenceCount =
+            document.getElementById("sentenceCount");
 
 
-            // Character count
-            charCount.innerText =
+        textInput.addEventListener(
+            "input",
+            updateCounter
+        );
+
+
+        function updateCounter() {
+
+            const text =
+                textInput.value;
+
+
+            /* Character Count */
+            characterCount.textContent =
                 text.length;
 
 
-            // Character count without spaces
-            charNoSpace.innerText =
+            /* Characters Without Spaces */
+            characterNoSpaceCount.textContent =
                 text.replace(/\s/g, "").length;
 
 
-            // Word count
+            /* Word Count */
             const words =
-                text.trim().split(/\s+/);
+                text.trim() === ""
+                    ? []
+                    : text.trim().split(/\s+/);
+
+            wordCount.textContent =
+                words.length;
 
 
-            if (text.trim() === "") {
+            /* Sentence Count */
+            const sentences =
+                text.trim() === ""
+                    ? []
+                    : text
+                        .trim()
+                        .split(/[.!?]+/)
+                        .filter(
+                            sentence =>
+                                sentence.trim() !== ""
+                        );
 
-                wordCount.innerText = 0;
+            sentenceCount.textContent =
+                sentences.length;
 
-            } else {
+        }
 
-                wordCount.innerText =
-                    words.length;
-            }
 
-        });
+        function clearText() {
+
+            textInput.value = "";
+
+            updateCounter();
+
+        }
 
     </script>
 

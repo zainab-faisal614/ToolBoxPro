@@ -2,31 +2,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QR Code Generator - Free Online QR Creator | ToolBoxPro</title>
+    <!-- SEO Title -->
+    <title>QR Code Generator - Free Online QR Generator | ToolBoxPro</title>
 
+    <!-- SEO Description -->
     <meta
         name="description"
-        content="Create QR codes from text, URLs and website links with ToolBoxPro's free online QR Code Generator."
+        content="Create QR codes for text, URLs, links, and more with ToolBoxPro's free online QR code generator."
     >
 
+    <!-- SEO Keywords -->
     <meta
         name="keywords"
-        content="QR code generator, QR generator, free QR code generator, online QR code maker, URL QR code"
+        content="QR code generator, free QR generator, online QR code generator, create QR code, QR code maker, URL QR code"
     >
 
     <meta name="author" content="ToolBoxPro">
 
+    <!-- Canonical URL -->
     <link
         rel="canonical"
         href="https://zainab-faisal614.github.io/ToolBoxPro/tools/qr.html"
     >
 
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="QR Code Generator - Free Online QR Generator | ToolBoxPro"
+    >
+
+    <meta
+        property="og:description"
+        content="Create QR codes for text, URLs, and links quickly with ToolBoxPro's free online QR code generator."
+    >
+
+    <meta
+        property="og:url"
+        content="https://zainab-faisal614.github.io/ToolBoxPro/tools/qr.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css">
 
 </head>
+
 
 <body>
 
@@ -48,7 +84,21 @@
 
     <main>
 
-        <!-- QR Generator -->
+        <!-- Back Links -->
+        <div class="back-links">
+
+            <a href="../index.html">
+                ← Back to Home
+            </a>
+
+            <a href="../index.html#tools">
+                ← Back to Tools
+            </a>
+
+        </div>
+
+
+        <!-- QR Code Generator -->
         <section class="tool-page">
 
             <div class="tool-header">
@@ -62,15 +112,15 @@
                 </h1>
 
                 <p>
-                    Create a QR code from text, website links or URLs
-                    quickly with this free online QR code generator.
+                    Create QR codes for text, URLs, links, and other
+                    information quickly and easily.
                 </p>
 
             </div>
 
 
             <!-- QR Generator Box -->
-            <div class="qr-box">
+            <div class="calculator-box">
 
                 <label for="qrText">
                     Enter Text or URL
@@ -79,17 +129,32 @@
                 <input
                     type="text"
                     id="qrText"
-                    placeholder="https://example.com"
+                    placeholder="Enter text, URL, or link..."
                 >
 
-                <button onclick="generateQR()">
+
+                <button
+                    type="button"
+                    onclick="generateQRCode()"
+                >
                     Generate QR Code
                 </button>
+
 
                 <div
                     id="qrcode"
                     class="qr-result"
                 ></div>
+
+
+                <button
+                    type="button"
+                    id="downloadButton"
+                    onclick="downloadQRCode()"
+                    style="display: none;"
+                >
+                    Download QR Code
+                </button>
 
             </div>
 
@@ -102,14 +167,14 @@
                 </h2>
 
                 <p>
-                    Enter the text, website address or URL that you want
-                    to turn into a QR code.
+                    Enter text, a website URL, or any other information
+                    into the input box above and click
+                    <strong>Generate QR Code</strong>.
                 </p>
 
                 <p>
-                    Click the Generate QR Code button. A QR code will
-                    appear below the button and can be scanned using a
-                    compatible phone or QR scanner.
+                    A QR code will be generated instantly. You can then
+                    scan it using a smartphone camera or QR scanner.
                 </p>
 
             </section>
@@ -119,18 +184,13 @@
             <section class="tool-info">
 
                 <h2>
-                    What Can You Use a QR Code For?
+                    Uses of QR Codes
                 </h2>
 
                 <p>
-                    QR codes can be useful for sharing website links,
-                    contact information, text, event details and other
-                    digital information.
-                </p>
-
-                <p>
-                    You can use this tool whenever you need to quickly
-                    convert text or a URL into a scannable QR code.
+                    QR codes can be used for websites, contact information,
+                    social media links, menus, product information,
+                    event details, and many other purposes.
                 </p>
 
             </section>
@@ -154,8 +214,8 @@
                 </p>
 
                 <p>
-                    Then click Generate QR Code to create a QR code
-                    containing that website address.
+                    The tool will create a QR code that can be scanned
+                    to open the website.
                 </p>
 
             </section>
@@ -165,19 +225,12 @@
             <section class="tool-info">
 
                 <h2>
-                    Is This QR Code Generator Private?
+                    Privacy
                 </h2>
 
                 <p>
-                    The basic QR code generation happens in your browser.
-                    The text or URL you enter is used to create the QR code
-                    on the page.
-                </p>
-
-                <p>
-                    Avoid entering confidential or sensitive information
-                    into any online tool unless you understand how that
-                    service handles your data.
+                    QR codes are generated directly in your browser.
+                    No account is required to use this tool.
                 </p>
 
             </section>
@@ -190,45 +243,37 @@
                     Frequently Asked Questions
                 </h2>
 
+
+                <h3>
+                    What is a QR code?
+                </h3>
+
+                <p>
+                    A QR code is a two-dimensional barcode that can store
+                    information such as text, URLs, and other data.
+                </p>
+
+
+                <h3>
+                    Can I create a QR code for a website?
+                </h3>
+
+                <p>
+                    Yes. Enter the complete website URL and click
+                    Generate QR Code.
+                </p>
+
+
                 <h3>
                     Is this QR code generator free?
                 </h3>
 
                 <p>
-                    Yes. ToolBoxPro's QR Code Generator is free to use
-                    and does not require an account.
-                </p>
-
-
-                <h3>
-                    What can I put into a QR code?
-                </h3>
-
-                <p>
-                    You can enter text, website URLs and other information
-                    that can be represented as text.
-                </p>
-
-
-                <h3>
-                    Can I scan the generated QR code?
-                </h3>
-
-                <p>
-                    Yes. A compatible smartphone or QR scanner can scan
-                    the generated QR code.
+                    Yes. ToolBoxPro provides this QR code generator
+                    free of charge and no account is required.
                 </p>
 
             </section>
-
-
-            <!-- Back Link -->
-            <a
-                href="../index.html"
-                class="back-link"
-            >
-                ← Back to All Tools
-            </a>
 
         </section>
 
@@ -262,41 +307,83 @@
 
 
     <!-- QR Code Library -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 
-    <!-- QR Code JavaScript -->
+    <!-- QR Code Script -->
     <script>
 
-        function generateQR() {
+        let qrCode;
+
+
+        function generateQRCode() {
 
             const text =
                 document.getElementById("qrText").value.trim();
 
-            const qrCode =
+            const qrContainer =
                 document.getElementById("qrcode");
 
+            const downloadButton =
+                document.getElementById("downloadButton");
 
-            qrCode.innerHTML = "";
 
+            if (!text) {
 
-            if (text === "") {
+                qrContainer.innerHTML =
+                    "<p>Please enter text or a URL.</p>";
 
-                alert("Please enter text or a URL.");
+                downloadButton.style.display =
+                    "none";
 
                 return;
             }
 
 
-            new QRCode(qrCode, {
+            qrContainer.innerHTML = "";
 
-                text: text,
 
-                width: 220,
+            qrCode =
+                new QRCode(
+                    qrContainer,
+                    {
+                        text: text,
+                        width: 220,
+                        height: 220,
+                        correctLevel: QRCode.CorrectLevel.H
+                    }
+                );
 
-                height: 220
 
-            });
+            downloadButton.style.display =
+                "inline-block";
+
+        }
+
+
+        function downloadQRCode() {
+
+            const qrCanvas =
+                document.querySelector(
+                    "#qrcode canvas"
+                );
+
+
+            if (!qrCanvas) {
+                return;
+            }
+
+
+            const link =
+                document.createElement("a");
+
+            link.download =
+                "toolboxpro-qr-code.png";
+
+            link.href =
+                qrCanvas.toDataURL("image/png");
+
+            link.click();
 
         }
 

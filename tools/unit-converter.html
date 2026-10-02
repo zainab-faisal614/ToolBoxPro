@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Unit Converter - Length, Weight, Temperature & Area | ToolBoxPro</title>
+
+    <meta
+        name="description"
+        content="Use ToolBoxPro's free unit converter to convert length, weight, temperature and area units quickly and easily online."
+    >
+
+    <meta
+        name="keywords"
+        content="unit converter, length converter, weight converter, temperature converter, area converter, online unit converter"
+    >
+
+    <meta name="author" content="ToolBoxPro">
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://zainab-faisal614.github.io/ToolBoxPro/tools/unit-converter.html"
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../favicon.svg"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            display: block;
+            font-size: 25px;
+            font-weight: 700;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 950px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        /* BACK LINKS */
+
+        .back-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .back-links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+            background: #ffffff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .back-links a:hover {
+            background: #007bff;
+            color: #ffffff;
+        }
+
+        /* TOOL */
+
+        .tool-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        /* CONVERTER */
+
+        .converter-box {
+            background: #f8faff;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e3eaf4;
+        }
+
+        .category-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .category-buttons button {
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            background: #e9eef6;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .category-buttons button:hover,
+        .category-buttons button.active {
+            background: #007bff;
+            color: #ffffff;
+        }
+
+        .converter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d8dce3;
+            border-radius: 9px;
+            font-size: 16px;
+            background: #ffffff;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .result-box {
+            margin-top: 10px;
+            padding: 18px;
+            background: #eef6ff;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #0069d9;
+            min-height: 60px;
+        }
+
+        .info-section {
+            margin-top: 40px;
+        }
+
+        .info-section h2 {
+            margin-bottom: 12px;
+        }
+
+        .info-section p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .info-section ul {
+            padding-left: 22px;
+            color: #555;
+        }
+
+        .info-section li {
+            margin-bottom: 8px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            color: #666;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 6px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 16px 5%;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            main {
+                margin: 25px auto;
+            }
+
+            .tool-container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .category-buttons {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .converter-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+            ToolBoxPro
+        </a>
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../index.html#tools">
+                Tools
+            </a>
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- BACK LINKS -->
+
+        <div class="back-links">
+
+            <a href="../index.html">
+                ← Back to Home
+            </a>
+
+            <a href="../index.html#tools">
+                ← Back to Tools
+            </a>
+
+        </div>
+
+
+        <!-- TOOL -->
+
+        <div class="tool-container">
+
+            <h1>
+                Unit Converter
+            </h1>
+
+            <p class="subtitle">
+                Convert length, weight, temperature and area units quickly and easily.
+            </p>
+
+
+            <div class="converter-box">
+
+
+                <!-- CATEGORIES -->
+
+                <div class="category-buttons">
+
+                    <button
+                        class="active"
+                        onclick="setCategory('length', this)"
+                    >
+                        Length
+                    </button>
+
+                    <button
+                        onclick="setCategory('weight', this)"
+                    >
+                        Weight
+                    </button>
+
+                    <button
+                        onclick="setCategory('temperature', this)"
+                    >
+                        Temperature
+                    </button>
+
+                    <button
+                        onclick="setCategory('area', this)"
+                    >
+                        Area
+                    </button>
+
+                </div>
+
+
+                <!-- CONVERTER -->
+
+                <div class="converter-grid">
+
+
+                    <div>
+
+                        <div class="form-group">
+
+                            <label for="fromUnit">
+                                From
+                            </label>
+
+                            <select id="fromUnit"></select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="inputValue">
+                                Value
+                            </label>
+
+                            <input
+                                type="number"
+                                id="inputValue"
+                                placeholder="Enter value"
+                                oninput="convert()"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="form-group">
+
+                            <label for="toUnit">
+                                To
+                            </label>
+
+                            <select id="toUnit"></select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Result
+                            </label>
+
+                            <div
+                                id="result"
+                                class="result-box"
+                            >
+                                0
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <section class="info-section">
+
+                <h2>
+                    About Unit Conversion
+                </h2>
+
+                <p>
+                    Unit conversion allows you to convert a measurement from
+                    one unit to another. ToolBoxPro's free unit converter
+                    supports several commonly used measurement categories.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <strong>Length:</strong>
+                        meters, kilometers, centimeters, millimeters,
+                        inches, feet, yards and miles.
+                    </li>
+
+                    <li>
+                        <strong>Weight:</strong>
+                        kilograms, grams, pounds and ounces.
+                    </li>
+
+                    <li>
+                        <strong>Temperature:</strong>
+                        Celsius, Fahrenheit and Kelvin.
+                    </li>
+
+                    <li>
+                        <strong>Area:</strong>
+                        square meters, square kilometers,
+                        square feet and square miles.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 ToolBoxPro. All rights reserved.
+        </p>
+
+        <p style="margin-top: 8px;">
+
+            <a href="../pages/about.html">
+                About
+            </a>
+
+            <a href="../pages/contact.html">
+                Contact
+            </a>
+
+            <a href="../pages/privacy.html">
+                Privacy Policy
+            </a>
+
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let currentCategory = "length";
+
+
+        const units = {
+
+            length: {
+                meter: "Meter (m)",
+                kilometer: "Kilometer (km)",
+                centimeter: "Centimeter (cm)",
+                millimeter: "Millimeter (mm)",
+                inch: "Inch (in)",
+                foot: "Foot (ft)",
+                yard: "Yard (yd)",
+                mile: "Mile (mi)"
+            },
+
+            weight: {
+                kilogram: "Kilogram (kg)",
+                gram: "Gram (g)",
+                pound: "Pound (lb)",
+                ounce: "Ounce (oz)"
+            },
+
+            temperature: {
+                celsius: "Celsius (°C)",
+                fahrenheit: "Fahrenheit (°F)",
+                kelvin: "Kelvin (K)"
+            },
+
+            area: {
+                squareMeter: "Square Meter (m²)",
+                squareKilometer: "Square Kilometer (km²)",
+                squareFoot: "Square Foot (ft²)",
+                squareMile: "Square Mile (mi²)"
+            }
+
+        };
+
+
+        function setCategory(category, button) {
+
+            currentCategory = category;
+
+            document
+                .querySelectorAll(".category-buttons button")
+                .forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+            button.classList.add("active");
+
+            populateUnits();
+
+            document.getElementById("inputValue").value = "";
+
+            document.getElementById("result").textContent = "0";
+
+        }
+
+
+        function populateUnits() {
+
+            const fromUnit =
+                document.getElementById("fromUnit");
+
+            const toUnit =
+                document.getElementById("toUnit");
+
+            fromUnit.innerHTML = "";
+
+            toUnit.innerHTML = "";
+
+
+            Object.entries(units[currentCategory])
+                .forEach(([value, text]) => {
+
+                    const option1 =
+                        document.createElement("option");
+
+                    option1.value = value;
+
+                    option1.textContent = text;
+
+                    fromUnit.appendChild(option1);
+
+
+                    const option2 =
+                        document.createElement("option");
+
+                    option2.value = value;
+
+                    option2.textContent = text;
+
+                    toUnit.appendChild(option2);
+
+                });
+
+
+            if (toUnit.options.length > 1) {
+                toUnit.selectedIndex = 1;
+            }
+
+        }
+
+
+        function convert() {
+
+            const value =
+                parseFloat(
+                    document.getElementById("inputValue").value
+                );
+
+
+            if (isNaN(value)) {
+
+                document.getElementById("result").textContent = "0";
+
+                return;
+
+            }
+
+
+            const from =
+                document.getElementById("fromUnit").value;
+
+            const to =
+                document.getElementById("toUnit").value;
+
+
+            let result;
+
+
+            if (currentCategory === "length") {
+
+                result = convertLength(value, from, to);
+
+            }
+
+            else if (currentCategory === "weight") {
+
+                result = convertWeight(value, from, to);
+
+            }
+
+            else if (currentCategory === "temperature") {
+
+                result = convertTemperature(value, from, to);
+
+            }
+
+            else if (currentCategory === "area") {
+
+                result = convertArea(value, from, to);
+
+            }
+
+
+            document.getElementById("result").textContent =
+                Number(result.toFixed(8));
+
+        }
+
+
+        function convertLength(value, from, to) {
+
+            const meters = {
+
+                meter: 1,
+                kilometer: 1000,
+                centimeter: 0.01,
+                millimeter: 0.001,
+                inch: 0.0254,
+                foot: 0.3048,
+                yard: 0.9144,
+                mile: 1609.344
+
+            };
+
+
+            return (value * meters[from]) / meters[to];
+
+        }
+
+
+        function convertWeight(value, from, to) {
+
+            const kilograms = {
+
+                kilogram: 1,
+                gram: 0.001,
+                pound: 0.45359237,
+                ounce: 0.028349523125
+
+            };
+
+
+            return (value * kilograms[from]) / kilograms[to];
+
+        }
+
+
+        function convertTemperature(value, from, to) {
+
+            let celsius;
+
+
+            if (from === "celsius") {
+
+                celsius = value;
+
+            }
+
+            else if (from === "fahrenheit") {
+
+                celsius = (value - 32) * 5 / 9;
+
+            }
+
+            else {
+
+                celsius = value - 273.15;
+
+            }
+
+
+            if (to === "celsius") {
+
+                return celsius;
+
+            }
+
+            if (to === "fahrenheit") {
+
+                return (celsius * 9 / 5) + 32;
+
+            }
+
+            return celsius + 273.15;
+
+        }
+
+
+        function convertArea(value, from, to) {
+
+            const squareMeters = {
+
+                squareMeter: 1,
+                squareKilometer: 1000000,
+                squareFoot: 0.09290304,
+                squareMile: 2589988.110336
+
+            };
+
+
+            return (
+                value * squareMeters[from]
+            ) / squareMeters[to];
+
+        }
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+                populateUnits();
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
